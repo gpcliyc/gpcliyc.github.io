@@ -1,0 +1,157 @@
+<!DOCTYPE html><html><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><title></title><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=keywords content=""><meta name=description content=""><link rel="shortcut icon" href=./images/common/logo_black.png type="image/x-icon"><meta http-equiv=Pragma content="no-cache"><meta http-equiv=Cache-Control content="no-store,must-revalidate"><meta http-equiv=Expires content="0"><link rel=stylesheet href=styles/reset.css><link rel=stylesheet href=styles/common.css><link rel=stylesheet href=styles/base.css><link rel=stylesheet href=styles/j.pagination.css><link rel=stylesheet href=styles/p_bid_hall.css><body><div class=index-head-wrap><div id=layout_header></div></div><div class="mod-center clearfloat"><div class=mod-menu id=j_mod-menu></div><div class=mod-body><div class=order><div class="theme bg-color" id=theme_bg-color></div><div class=order-box><div class="mod-bid clearfloat"><div class=mod-bid-list><div class=loadingA></div><div id=j_tender_list class=bid-list></div><div class="clear-fixed fenye"><div id=pagination class=pagination></div><input type=hidden id=pageNum value=1></div></div></div></div></div></div></div><div id=layout_footer class=mod-footer></div><script src=./plugin/seajs/2.2.3/sea.js type=text/javascript></script><script src=./js/config.js type=text/javascript></script><script type=text/javascript>seajs.use("./js/p_my_participation_tender.js");</script><script id=t:j_mod-menu type=text/html><div class="item">
+    <h1><%=setLanguagePackage('我参与的招标2')%></h1>
+    <ul>
+        <li class="active" data-status=""><%=setLanguagePackage('全部参与')%><label class="total"></label></li>
+        <!-- <li data-status="1"><%=setLanguagePackage('公示中')%><label class="publicity"></label></li> -->
+        <li data-status="2"><%=setLanguagePackage('竞价中')%><label class="bidding"></label></li>
+        <li data-status="3"><%=setLanguagePackage('已中标2')%><label class="finish"></label></li>
+        <li data-status="4"><%=setLanguagePackage('未中标2')%><label class="fail"></label></li>
+    </ul>
+</div></script><script id=t:theme_bg-color type=text/html><h1><%=setLanguagePackage('招标列表')%></h1></script><script id=t:j_tender_list type=text/html><%for(var i = 0; i < list.length; i++){%>
+    <div class="item item-type-<%=list[i].type%>" data-tenderId="<%=list[i].id%>" data-userId="<%=list[i].userId%>" data-bidType="<%=list[i].type%>"
+         data-contractId="<%=list[i].contractId%>" data-status="<%=list[i].status%>">
+        <div class="con-top clearfloat">
+            <div class="bid-cover">
+                <img src="<%=list[i].images%>" alt=""/>
+                <%if(list[i].status == 1){%>
+                    <div class="sign <%=setLanguagePackage('sign-show')%>"></div>
+                <%}else if(list[i].status == 2){%>
+                    <div class="sign <%=setLanguagePackage('sign-bidding')%>"></div>
+                <%}else if(list[i].status == 3){%>
+                    <div class="sign <%=setLanguagePackage('sign-finished')%>"></div>
+                <%}else{%>
+                    <div class="sign <%=setLanguagePackage('sign-cancle')%>"></div>
+                <%}%>
+            </div>
+            <div class="detail">
+                <p class="title"><%=list[i].title%></p>
+                <div class="bid-label">
+                    <!--状态:1公示中,2竞价中,3已结束,4已取消 ,-->
+                    <%if(list[i].status == 2){%>
+                        <span class="color-41"><%=setLanguagePackage('已出价')%></span>
+                    <%}else if(list[i].status == 3){%>
+                        <%if(list[i].successBuyQuantity  > 0){%>
+                            <span class="color-41"><%=setLanguagePackage('已中标2')%></span>
+                        <%}else{%>
+                            <%=setLanguagePackage('未中标2')%>
+                        <%}%>
+                    <%}else if(list[i].status == 4){%>
+                       <%=setLanguagePackage('已取消')%>
+                    <%}%>
+                </div>
+                <div class="con <%=setLanguagePackageCss('label')%> clearfloat">
+                    <%var applyAmountClass;%>
+                    <%if(list[i].type == 1){%>
+                    <%applyAmountClass = 1;%>
+                    <%}else{%>
+                    <%applyAmountClass = 2;%>
+                    <%}%>
+
+                    <%var totalBuyClass;%>
+                    <%if(list[i].type == 1){%>
+                    <%totalBuyClass = 2;%>
+                    <%}else{%>
+                    <%totalBuyClass = 1;%>
+                    <%}%>
+                    <div class="quality">
+                        <p class="">
+                            <label class="w-apply-<%=applyAmountClass%>"><%=list[i].type==1?setLanguagePackage('竞买量'):setLanguagePackage('采购量')%></label>
+                            <span><%=list[i].totalQuantity%><%=setLanguagePackage('吨')%></span>
+                        </p>
+                        <%if(userList.login){%>
+                        <%if(list[i].totalBuyQuantity != null){%>
+                        <p class="apply-amount">
+                            <label class="w-apply-<%=totalBuyClass%>"><%=list[i].type==1?setLanguagePackage('申买量'):setLanguagePackage('供应量')%></label>
+                            <span>
+                                <%=list[i].totalBuyQuantity%><%=setLanguagePackage('吨')%>
+                            </span>
+                        </p>
+                        <%}%>
+                        <%}%>
+                    </div>
+                    <div class="purchase">
+                        <p class="total"><span>￥<%=(list[i].criticalPrice).toFixed(2)%>/<%=setLanguagePackage('吨')%></span>&nbsp;<%=setLanguagePackage('起')%></p>
+                        <%if(userList.login){%>
+                        <p class="success-amount">
+                            <label>
+                                <%=setLanguagePackage('我的中标量')%>：<%=list[i].successBuyQuantity%><%=setLanguagePackage('吨')%>
+                            </label>
+                            <span></span>
+                        </p>
+                        <%}%>
+                    </div>
+
+                    <%if(list[i].status == 2 && list[i].collectedUserId == userList.data.id){%>
+                        <div class="func-btn">
+                            <button class="btn btn-offer <%=setLanguagePackageCss('bid-btn')%> btn-offer-2 btn-<%=list[i].type==1?'blue':'green'%>"><%=setLanguagePackage('出价')%></button>
+                        </div>
+                    <%}else if(list[i].status == 3){%>
+                        <%if(list[i].signStatus == 0){%>
+                            <div class="func-btn">
+                                <button class="btn btn-sign btn-sign-2 btn-<%=list[i].type==1?'blue':'green0'%>"><%=setLanguagePackage('去签协议2')%></button>
+                            </div>
+                        <%}else{%>
+                            <div class="bid-number">
+                                <i><%=list[i].totalBidSuccessUser%></i>
+                                <span><%=setLanguagePackage('中标人数')%></span>
+                            </div>
+                        <%}%>
+                    <%}else if(list[i].status == 1){%>
+
+                    <%}%>
+                </div>
+
+            </div>
+        </div>
+        <%var reputationClass;%>
+        <%if (list[i].reputationValue <= 0) {%>
+            <%reputationClass = 1;%>
+        <%} else if (list[i].reputationValue > 0 && list[i].reputationValue <= 150) {%>
+            <%reputationClass = 2;%>
+        <%} else if (list[i].reputationValue > 150 && list[i].reputationValue <= 300) {%>
+            <%reputationClass = 3;%>
+        <%} else if (list[i].reputationValue > 300) {%>
+            <%reputationClass = 4;%>
+        <%}%>
+        <div class="con-bottom">
+            <div class="w-supplier">
+                <p><tt><%=list[i].type==1?setLanguagePackage('供应商'):setLanguagePackage('采购方')%>：</tt><em><%=list[i].companyName%></em><span class="s-credibility-<%=reputationClass%>"></span></p>
+                <div class="w-credibility">
+                    <h4><%=list[i].companyName%></h4>
+                    <h5><tt><%=returnZhengshu(list[i].star)%></tt><i><%=list[i].orderSuccessCount%><%=setLanguagePackage('单')%></i></h5>
+                    <dl>
+                        <dt class="w-credibility-<%=reputationClass%>"></dt>
+                        <dd><%=setLanguagePackage('信誉值')%>：<%=list[i].reputationValue%></dd>
+                    </dl>
+                    <%if (list[i].followed != null) {%>
+                    <h6 class="focus_on" data-userid="<%=list[i].userId%>"><%=list[i].followed ? setLanguagePackage('取消关注') : setLanguagePackage('关注')%></h6>
+                    <%}%>
+                </div>
+            </div>
+            <div class="func-time">
+                <%if(list[i].status == 1){%>
+                <span class="count"><%=setLanguagePackage('距开始')%>：<em class="j-count"></em></span>
+                <%}else if(list[i].status == 2){%>
+                <span class="count color-red"><%=setLanguagePackage('距结束')%>：<em class="j-count"><%=list[i].endTime%></em></span>
+                <%}%>
+                <span class="start"><%=setLanguagePackage('发布时间')%>：<%=dateYMDHMSFormat(list[i].createTime)%></span>
+            </div>
+        </div>
+        <%if(list[i].bidUserName){%>
+        <div class="manager-bidding-detail clearfloat">
+            <span>
+             <!--区分 竞价中、已中标、未中标-->
+                <%if(list[i].status == 2){%>
+                    <%=list[i].bidUserName%>(<%=list[i].bidUserCompanyName%>),<%=setLanguagePackage('正在竞价该招标')%>...
+                <%}else if(list[i].status == 3 && list[i].successBuyQuantity>0){%>
+                    <%=list[i].bidUserName%>(<%=list[i].bidUserCompanyName%>),<%=setLanguagePackage('参与竞价该招标')%>【<%=setLanguagePackage('已中标2')%>】
+                <%}else{%>
+                    <%=list[i].bidUserName%>(<%=list[i].bidUserCompanyName%>),<%=setLanguagePackage('参与竞价该招标')%>【<%=setLanguagePackage('未中标2')%>】
+                <%}%>
+            </span>
+        </div>
+        <%}%>
+    </div>
+    <%}%></script><style type=text/css>.mod-menu .item:nth-child(1) h1{
+    background: none!important;
+    }</style>

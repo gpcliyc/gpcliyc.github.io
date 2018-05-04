@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><title></title><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=keywords content="焦易网,焦易, jiaoyiwang,jiaoyi,石油焦,煅后焦,石油焦厂家,石油焦价格,煅后焦价格"><meta name=description content="焦易网，是首家石油焦全产业链电商交易平台，为炭素行业上下游企业提供信息流、商流、资金流和物流配送的一站式全产业链服务，以至优化全球石油焦资源流转配置
+效率，实现石油焦供求两端的经济利益最大化。"><link rel="shortcut icon" href=./images/common/logo_black.png type="image/x-icon"><meta http-equiv=Pragma content="no-cache"><meta http-equiv=Cache-Control content="no-store,must-revalidate"><meta http-equiv=Expires content="0"><link rel=stylesheet href=styles/reset.css><link rel=stylesheet href=styles/common.css><link rel=stylesheet href=styles/base.css><link rel=stylesheet href=styles/p_account.css><body><div class=index-head-wrap><div id=layout_header></div></div><div class="mod-center clearfloat"><div id=j_modMenu class="mod-menu mod-menu-height"></div><div class="mod-body bg-color"><div class=basic><div class="theme bg-color"><h1>优惠券</h1></div><div class=coupons><div class=coupons-list id=coupons-list></div></div></div></div></div><div id=layout_footer class=mod-footer></div><script src=./plugin/seajs/2.2.3/sea.js type=text/javascript></script><script src=./js/config.js type=text/javascript></script><script type=text/javascript>seajs.use("./js/p_coupons.js");</script><script type=text/html id=t:coupons-list><%if(list && list.length > 0) {%>
+    <div class="coupons_txt">每张优惠券都有一定的有效期，记得及时使用哦。</div>
+    <%for(var i = 0; i < list.length; i++){%>
+        <dl class="<%=getDlClass(list[i])%> coupons-past-<%=list[i].status%>">
+            <dt>
+                <h4>￥ <span><%=list[i].amount%></span> / 吨</h4>
+                <p>满减券 [满<%=list[i].useLimitAmount%>吨可用]</p>
+                <h5>有效期至<%=dateFormat(list[i].endTime)%></h5>
+            </dt>
+            <dd>
+            <dd>
+                <h4 class="clearfloat"><i>限类型：</i><span><%=getUseType(list[i].useType)%></span></h4>
+                <h5 class="clearfloat"><i>限数量：</i><span>单笔中标满<%=list[i].useLimitAmount%>吨，每吨单价可减<%=list[i].amount%>元</span></h5>
+                <h6><a href="p_bid_hall.html">立即使用</a></h6>
+            </dd>
+            <!--<div class="coupons-status-<%=list[i].status%>">-->
+                <!--<div class="img-past"></div>-->
+            <!--</div>-->
+            <!--<div class="coupons-past-text">-->
+                <!--<p>已 过</p>-->
+                <!--<p>期</p>-->
+            <!--</div><div class="coupons-status-<%=list[i].status%>">-->
+                <!--<div class="img-past"></div>-->
+            <!--</div>-->
+            <!--<div class="coupons-past-text">-->
+                <!--<p>已 过</p>-->
+                <!--<p>期</p>-->
+            <!--</div>-->
+        </dl>
+    <%}%>
+<%} else {%>
+    <p class="no-coupons">暂无优惠卷</p>
+<%}%></script>

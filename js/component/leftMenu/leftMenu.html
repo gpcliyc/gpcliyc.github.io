@@ -1,0 +1,42 @@
+<div class="item">
+    <h1><%=setLanguagePackageLeftMenu('基本信息')%></h1>
+    <ul>
+        <li class="<%=(str=='个人面板')?'active':''%>"><a href="p_personal_info.html" id="at_leftMenu_p_personal_info" name="at_leftMenu_p_personal_info"><%=setLanguagePackageLeftMenu('个人面板')%></a></li>
+        <li class="<%=(str=='登录密码')?'active':''%>"><a href="p_login_password.html" id="at_leftMenu_p_login_password" name="at_leftMenu_p_login_password"><%=setLanguagePackageLeftMenu('登录密码')%></a></li>
+        <li class="<%=(str=='我的关注')?'active':''%>"><a href="p_focus_on.html" id="at_leftMenu_p_focus_on" name="at_leftMenu_p_focus_on"><%=setLanguagePackageLeftMenu('我的关注')%></a></li>
+    </ul>
+</div>
+<div class="item">
+    <h1><%=setLanguagePackageLeftMenu('公司信息')%></h1>
+    <ul>
+        <%if(data.companyId != 0 && data.role == 2){%>
+        <li class="<%=(str=='员工列表')?'active':''%>"><a href="p_my_staff.html" id="at_leftMenu_p_my_staff" name="at_leftMenu_p_my_staff"><%=setLanguagePackageLeftMenu('员工列表')%></a></li>
+        <li class="<%=(str=='公司认证')?'active':''%>"><a href="p_person_certification.html" id="at_leftMenu_p_person_certification" name="at_leftMenu_p_person_certification"><%=setLanguagePackageLeftMenu('公司认证')%></a></li>
+        <%}else if(data.companyId != 0 && data.role == 1){%>
+        <li class="<%=(str=='员工列表')?'active':''%>"><a href="p_my_staff.html" id="at_leftMenu_p_my_staff" name="at_leftMenu_p_my_staff"><%=setLanguagePackageLeftMenu('员工列表')%></a></li>
+        <li class="<%=(str=='员工认证')?'active':''%>"><a href="p_application.html" id="at_leftMenu_p_application" name="at_leftMenu_p_application"><%=setLanguagePackageLeftMenu('员工认证')%></a></li>
+        <%}else if(data.role == 3){%>
+        <li class="<%=(str=='员工列表')?'active':''%>"><a href="p_my_staff.html" id="at_leftMenu_p_my_staff" name="at_leftMenu_p_my_staff"><%=setLanguagePackageLeftMenu('员工列表')%></a></li>
+        <li class="<%=(str=='员工认证')?'active':''%>"><a href="p_application.html" id="at_leftMenu_p_application" name="at_leftMenu_p_application"><%=setLanguagePackageLeftMenu('员工认证')%></a></li>
+        <%}else if(data.role == 4){%>
+        <li class="<%=(str=='员工认证')?'active':''%>"><a href="p_application.html" id="at_leftMenu_p_application" name="at_leftMenu_p_application"><%=setLanguagePackageLeftMenu('员工认证')%></a></li>
+        <%}else if(data.role == 5){%>
+        <li class="<%=(str=='公司认证')?'active':''%>"><a href="p_person_certification.html" id="at_leftMenu_p_person_certification" name="at_leftMenu_p_person_certification"><%=setLanguagePackageLeftMenu('公司认证')%></a></li>
+        <%}else{%>
+        <li class="<%=(str=='公司认证')?'active':''%>"><a href="p_person_certification.html" id="at_leftMenu_p_person_certification" name="at_leftMenu_p_person_certification"><%=setLanguagePackageLeftMenu('公司认证')%></a></li>
+        <li class="<%=(str=='员工认证')?'active':''%>"><a href="p_application.html" id="at_leftMenu_p_application" name="at_leftMenu_p_application"><%=setLanguagePackageLeftMenu('员工认证')%></a></li>
+        <%}%>
+    </ul>
+</div>
+<!-- 管理员才能有账号资金菜单 -->
+<%if(data.role == 2){%>
+<div class="item">
+    <h1><%=setLanguagePackageLeftMenu('账户资金')%></h1>
+    <ul>
+        <li class="<%=(str=='优惠券')?'active':''%>"><a href="p_coupons.html" id="at_leftMenu_p_coupons" name="at_leftMenu_p_coupons"><%=setLanguagePackageLeftMenu('优惠券')%></a></li>
+        <li class="<%=(str=='账户概览')?'active':''%>"><a href="p_balance.html" id="at_leftMenu_p_balance" name="at_leftMenu_p_balance"><%=setLanguagePackageLeftMenu('账户概览')%></a></li>
+        <li class="<%=(str=='交易记录')?'active':''%>"><a href="p_trade_detail.html" id="at_leftMenu_p_trade_detail" name="at_leftMenu_p_trade_detail"><%=setLanguagePackageLeftMenu('交易记录')%></a></li>
+        <li class="<%=(str=='交易密码')?'active':''%>"><a href="p_trade_password.html" id="at_leftMenu_p_trade_password" name="at_leftMenu_p_trade_password"><%=setLanguagePackageLeftMenu('交易密码')%></a></li>
+    </ul>
+</div>
+<%}%>

@@ -1,0 +1,783 @@
+<!DOCTYPE html><html><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><title></title><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=keywords content="石油焦现货,石油焦报价,石油焦价格,石油焦供应商,石油焦价格,石油焦招标,石油焦行情,煅后焦现货, 煅后焦报价, 煅后焦价格, 煅后焦供应商, 煅后焦价
+格, 煅后焦招标, 煅后焦行情,焦易网,焦易"><meta name=description content=石油焦大厅提供最新石油焦招标资源，让石油焦交易更简单，更高效，更安全!煅后焦大厅提供最新煅后焦招标资源，找好焦，上焦易！><link rel="shortcut icon" href=./images/common/logo_black.png type="image/x-icon"><meta http-equiv=Pragma content="no-cache"><meta http-equiv=Cache-Control content="no-store,must-revalidate"><meta http-equiv=Expires content="0"><link rel=stylesheet href=styles/reset.css><link rel=stylesheet href=styles/common.css><link rel=stylesheet href=styles/base.css><link rel=stylesheet href=styles/j.pagination.css><link rel=stylesheet href=styles/p_index.css><link rel=stylesheet href=styles/p_bid_hall.css><body><div class="index-head-wrap hall-bg"><div id=particles-js></div><div class=mod-header><div id=layout_header></div><div class=header-bottom><div class=login-firstBox><div class=login-first><div class=triangle></div><h3>要资质认证才可以发布招标哦 !</h3><a class=go-Certification href=p_person_certification.html id=go-Certification name=go-Certification>去资质认证</a> <a class=go-look href=p_bid_hall.html id=go-look name=go-look>我先逛逛</a></div></div><div class=trade-wrap><div class="trade clearfloat" id=petrocokeType></div></div><div class=func id=func></div></div></div></div><div class=bid-hall><div class=bid-tabBox><div class=bid-tabIn><ul class="bid-tab clearfloat" id=bid-tab></ul></div></div><div class=mod-tab-bid id=ashOrDensityTitle></div><div class=hover-menu id=hover-menu></div><div class=news-modular id=news_modular></div><div class="mod-bid clearfloat"><div class=mod-bid-list><div class=loadingA></div><div id=j_tender_list1 class=bid-list></div><div class="clear-fixed fenye"><div id=pagination1 class=pagination></div><input type=hidden id=pageNum1 value=1></div></div><div class="mod-bid-list hide"><div class=loadingA></div><div id=j_tender_list2 class=bid-list></div><div class="clear-fixed fenye"><div id=pagination2 class=pagination></div><input type=hidden id=pageNum2 value=1></div></div><div class=bid-condition><div class="top bid-condition-top" id=top_search></div></div></div></div><div id=layout_footer class=mod-footer></div><script src=./plugin/seajs/2.2.3/sea.js type=text/javascript></script><script src=./js/config.js type=text/javascript></script><script type=text/javascript>seajs.use("./js/p_bid_hall.js");</script><script id=t:func type=text/html><button class="publish btn publish-bid" id="at_bid_hall_publish" name="at_bid_hall_publish">
+        <%=setLanguagePackage('我要供应')%>
+    </button>
+    <button class="publish btn release" id="at_bid_hall_release" name="at_bid_hall_release">
+        <%=setLanguagePackage('我要采购')%>
+    </button>
+    <button class="certify btn" id="at_bid_hall_certify" name="at_bid_hall_certify"><%=setLanguagePackage('资质验证')%>
+    </button></script><script id=t:bid-tab type=text/html><li><span class="bid_supply" id="at_bid_hall_bid_supply" name="at_bid_hall_bid_supply"><%=setLanguagePackage('供应大厅')%></span><i></i>
+    </li>
+    <li><span class="bid_procurement" id="at_bid_hall_bid_procurement" name="at_bid_hall_bid_procurement"><%=setLanguagePackage('采购大厅')%></span><i></i>
+    </li></script><script id=t:petrocokeType type=text/html><h5><%=setLanguagePackage('当前位置')%></h5>
+    <%var goWhere1,goWHere2;%>
+    <%if(data == 1){ goWhere1 = 2 ; goWhere2 = 3 %>
+    <%}else if(data == 2){ goWhere1 = 1;goWhere2 = 3 %>
+    <%}else if(data == 3){ goWhere1 = 1;goWhere2 = 2 %>
+    <%}%>
+    <h1>
+        <%if(data == 1){%>
+        <%=setLanguagePackage('石油焦大厅')%>
+        <%}else if(data == 2){%>
+        <%=setLanguagePackage('煅后焦大厅')%>
+        <%}else if(data == 3){%>
+        <%=setLanguagePackage('焦炭大厅')%>
+        <%}%>
+    </h1>
+    <p>
+        <%if(data == 1){%>
+        <a href="p_bid_hall.html?petrolType=<%=goWhere1%>" id="at_bid_hall_other" name="at_bid_hall_other">
+            <%=setLanguagePackage('前往煅后焦大厅') %>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="p_bid_hall.html?petrolType=<%=goWhere2%>" id="at_bid_hall_tan" name="at_bid_hall_tan">
+            <%=setLanguagePackage('前往焦炭大厅') %>
+        </a>
+        <%}else if(data == 2){%>
+        <a href="p_bid_hall.html?petrolType=<%=goWhere1%>" id="at_bid_hall_shiyou" name="at_bid_hall_shiyou">
+            <%=setLanguagePackage('前往石油焦大厅') %>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="p_bid_hall.html?petrolType=<%=goWhere2%>" id="at_bid_hall_tan" name="at_bid_hall_tan">
+            <%=setLanguagePackage('前往焦炭大厅') %>
+        </a>
+        <%}else if(data == 3){%>
+        <a href="p_bid_hall.html?petrolType=<%=goWhere1%>" id="at_bid_hall_shiyou" name="at_bid_hall_shiyou">
+            <%=setLanguagePackage('前往石油焦大厅') %>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="p_bid_hall.html?petrolType=<%=goWhere2%>" id="at_bid_hall_other" name="at_bid_hall_other">
+            <%=setLanguagePackage('前往煅后焦大厅') %></a>
+        <%}%>
+    </p></script><script type=text/html id=t:ashOrDensityTitle><ul class="clearfloat">
+        <li class="li type"><span data-contentType=""><%=setLanguagePackage('所有硫含量')%></span><i class="on"></i></li>
+        <%if(data == 1 || data == 3){%>
+        <li class="li type-ash"><span><%=setLanguagePackage('所有灰分含量')%></span><i class="on"></i></li>
+        <%} else if(data == 2){%>
+        <li class="li type-tensity"><span><%=setLanguagePackage('所有真密度含量')%></span><i class="on"></i></li>
+        <%}%>
+        <li class="li type-va"><span data-contentType=""><%=setLanguagePackage('所有钒含量')%></span><i class="on"></i></li>
+        <li class="li place"><span data-value="所有产地"><%=setLanguagePackage('所有产地')%></span><i class="on"></i></li>
+        <li class="li type-label"><span data-value="所有标签"><%=setLanguagePackage('所有标签')%></span><i class="on"></i></li>
+        <li class="other"><span><%=setLanguagePackage('其他筛选')%></span></li>
+        <li class="type-focus"><span>+<%=setLanguagePackage('关注')%></span></li>
+    </ul></script><script type=text/html id=t:hover-menu><div class="menu-item type" style="display: none;">
+        <label></label>
+        <ul>
+            <li data-maxSu="" data-minSu=""><%=setLanguagePackage('所有硫含量')%></li>
+            <li data-maxSu="1.0" data-minSu=""><%=setLanguagePackage('硫')%>&lt;1.0%</li>
+            <li data-maxSu="1.5" data-minSu="1.0"><%=setLanguagePackage('硫')%>1.0%-1.5%</li>
+            <li data-maxSu="2.0" data-minSu="1.5"><%=setLanguagePackage('硫')%>1.5%-2.0%</li>
+            <li data-maxSu="3.0" data-minSu="2.0"><%=setLanguagePackage('硫')%>2.0%-3.0%</li>
+            <li data-maxSu="4.0" data-minSu="3.0"><%=setLanguagePackage('硫')%>3.0%-4.0%</li>
+            <li data-maxSu="5.0" data-minSu="4.0"><%=setLanguagePackage('硫')%>4.0%-5.0%</li>
+            <li data-max="" data-minSu="5.0"><%=setLanguagePackage('硫')%>≥5.0%</li>
+            <li><%=setLanguagePackage('自定义含量')%></li>
+        </ul>
+    </div>
+    <%if(data == 1 || data == 3){%>
+        <div class="menu-item type-ash" style="display: none;">
+            <label></label>
+            <ul>
+                <li data-maxAsh="" data-minAsh=""><%=setLanguagePackage('所有灰分含量')%></li>
+                <li data-maxAsh="0.5" data-minAsh=""><%=setLanguagePackage('灰分')%>&lt;0.5%</li>
+                <li data-maxAsh="1.0" data-minAsh="0.5"><%=setLanguagePackage('灰分')%>0.5%-1.0%</li>
+                <li data-maxAsh="" data-minAsh="1.0"><%=setLanguagePackage('灰分')%>≥1.0%</li>
+                <li><%=setLanguagePackage('自定义含量')%></li>
+            </ul>
+        </div>
+    <%}else if(data == 2){%>
+        <div class="menu-item type-tensity" style="display: none;">
+            <label></label>
+            <ul>
+                <li data-maxTensity="" data-minTensity=""><%=setLanguagePackage('所有真密度含量')%></li>
+                <li data-maxTensity="2.00" data-minTensity="1.98"><%=setLanguagePackage('真密度')%>1.98-2.00</li>
+                <li data-maxTensity="2.03" data-minTensity="2.00"><%=setLanguagePackage('真密度')%>2.00-2.03</li>
+                <li data-maxTensity="2.06" data-minTensity="2.03"><%=setLanguagePackage('真密度')%>2.03-2.06</li>
+                <li data-maxTensity="2.08" data-minTensity="2.06"><%=setLanguagePackage('真密度')%>2.06-2.08</li>
+                <li data-maxTensity="" data-minTensity="2.08"><%=setLanguagePackage('真密度')%>≥2.08</li>
+                <li><%=setLanguagePackage('自定义含量')%></li>
+            </ul>
+        </div>
+    <%}%>
+
+    <div class="menu-item type-va" style="display: none;">
+        <label></label>
+        <ul>
+            <li data-maxVa="" data-minVa=""><%=setLanguagePackage('所有钒含量')%></li>
+            <li data-maxVa="100" data-minVa=""><%=setLanguagePackage('钒')%>&lt;100</li>
+            <li data-maxVa="150" data-minVa="100"><%=setLanguagePackage('钒')%>100-150</li>
+            <li data-maxVa="250" data-minVa="150"><%=setLanguagePackage('钒')%>150-250</li>
+            <li data-maxVa="350" data-minVa="250"><%=setLanguagePackage('钒')%>250-350</li>
+            <li data-maxVa="450" data-minVa="350"><%=setLanguagePackage('钒')%>350-450</li>
+            <li data-maxVa="500" data-minVa="450"><%=setLanguagePackage('钒')%>450-500</li>
+            <li data-maxVa="" data-minVa="500"><%=setLanguagePackage('钒')%>≥500</li>
+            <li><%=setLanguagePackage('自定义含量')%></li>
+        </ul>
+    </div>
+    <div class="menu-item place" style="display: none;">
+        <label></label>
+        <ul>
+            <li data-value="所有产地"><%=setLanguagePackage('所有产地')%></li>
+            <li data-value="东北地区"><%=setLanguagePackage('东北地区')%></li>
+            <li data-value="华北地区"><%=setLanguagePackage('华北地区')%></li>
+            <li data-value="华东地区"><%=setLanguagePackage('华东地区')%></li>
+            <li data-value="华南地区"><%=setLanguagePackage('华南地区')%></li>
+            <li data-value="华中地区"><%=setLanguagePackage('华中地区')%></li>
+            <li data-value="西北地区"><%=setLanguagePackage('西北地区')%></li>
+            <li data-value="西南地区"><%=setLanguagePackage('西南地区')%></li>
+            <li data-value="其他"><%=setLanguagePackage('其他')%></li>
+        </ul>
+    </div>
+    <div class="menu-item type-label" style="display: none;">
+        <label></label>
+        <ul>
+            <li data-label=""><%=setLanguagePackage('所有标签')%></li>
+            <%if(data == 1){%>
+            <li data-label="1"><%=setLanguagePackage('海绵焦')%></li>
+            <li data-label="2"><%=setLanguagePackage('弹丸焦')%></li>
+            <li data-label="3"><%=setLanguagePackage('针状焦')%></li>
+            <%} else if(data == 2){%>
+            <li data-label="4"><%=setLanguagePackage('煅烧石油焦')%></li>
+            <li data-label="5"><%=setLanguagePackage('增碳剂')%></li>
+            <li data-label="6"><%=setLanguagePackage('收尘粉')%></li>
+            <%} else if(data == 3){%>
+            <li data-label="7"><%=setLanguagePackage('冶金焦')%></li>
+            <li data-label="8"><%=setLanguagePackage('铸造焦')%></li>
+            <li data-label="9"><%=setLanguagePackage('铁合金焦')%></li>
+            <li data-label="10"><%=setLanguagePackage('有色金属冶炼用焦')%></li>
+            <%}%>
+        </ul>
+    </div></script><script id=t:j_tender_list type=text/html><%if(userList.login && userData.length>0){%>
+    <h1 class="title"><%=setLanguagePackage('我发布的招标')%></h1>
+    <%for(var i = 0; i < userData.length; i++){%>
+    <div class="item" data-tenderId="<%=userData[i].id%>" data-userId="<%=userData[i].userId%>"
+         data-bidType="<%=userData[i].type%>" data-status="<%=userData[i].status%>"
+         　data-contractId="<%=userData[i].contractId%>">
+        <div class="con-top clearfloat">
+            <div class="bid-cover">
+                <img src="<%=userData[i].images%>" alt=""
+                     id="at_bid_hall_userData_img_<%=userData[i].type==1?'':'cg_'%><%=i%>"
+                     name="at_bid_hall_userData_img_<%=userData[i].type==1?'':'cg_'%><%=i%>"/>
+                <div class="sign <%=setLanguagePackage('sign-bidding')%>"></div>
+            </div>
+            <div class="detail">
+                <p class="title" id="at_bid_hall_userData_title_<%=userData[i].type==1?'':'cg_'%><%=i%>"
+                   name="at_bid_hall_userData_title_<%=userData[i].type==1?'':'cg_'%><%=i%>"><%=userData[i].title%></p>
+                <div class="bid-label">
+                    <span class="color-41"><%=setLanguagePackage('竞价中')%></span>
+                </div>
+                <div class="con <%=setLanguagePackageCss('label')%> clearfloat">
+                    <%var applyAmountClass;%>
+                    <%if(userData[i].type == 1){%>
+                    <%applyAmountClass = 1;%>
+                    <%}else{%>
+                    <%applyAmountClass = 2;%>
+                    <%}%>
+                    <%var totalBuyClass;%>
+                    <%if(userData[i].type == 1){%>
+                    <%totalBuyClass = 2;%>
+                    <%}else{%>
+                    <%totalBuyClass = 1;%>
+                    <%}%>
+                    <div class="quality">
+                        <p class="">
+                            <label class="w-apply-<%=applyAmountClass%>"
+                                   id="at_bh_jm<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>"
+                                   name="at_bh_at_bh_jm<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>">
+                                <%=userData[i].type==1?setLanguagePackage('竞买量'):setLanguagePackage('采购量')%>
+                            </label>
+                            <span><%=userData[i].totalQuantity%><%=setLanguagePackage('吨')%></span>
+                        </p>
+                        <p class="apply-amount">
+                            <label class="w-apply-<%=totalBuyClass%>"
+                                   id="at_bh_sm<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>"
+                                   name="at_bh_sm<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>">
+                                <%=userData[i].type==1?setLanguagePackage('申买量'):setLanguagePackage('供应量')%>
+                            </label>
+                            <span>
+                            <%=userData[i].totalBuyQuantity%><%=setLanguagePackage('吨')%>
+                        </span>
+                        </p>
+                    </div>
+                    <div class="purchase <%=setLanguagePackageCss('purchase')%>">
+                        <p class="total" id="at_bh_total<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>"
+                           name="at_bh_total<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>">
+                            <%if(userData[i].showPrice == null){%>
+                            <span>￥--</span>
+                            <%}else{%>
+                            <span>￥<%=(userData[i].showPrice).toFixed(2)%>/<%=setLanguagePackage('吨')%></span>&nbsp;<%=setLanguagePackage('起')%>
+                            <%}%>
+                        </p>
+                        <%if(userData[i].successQuantity != null){%>
+                        <p class="success-amount <%=setLanguagePackageCss('success-amount-national')%>">
+                            <label id="at_bh_zbl<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>"
+                                   name="at_bh_zbl<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>">
+                                <%=setLanguagePackage('中标量')%>：<%=userData[i].successQuantity%><%=setLanguagePackage('吨')%>
+                            </label>
+                            <span></span>
+                        </p>
+                        <%}%>
+                    </div>
+                    <%if(userData[i].totalBidCount){%>
+                    <div class="bid-number">
+                        <i id="at_bh_cjrs<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>"
+                           name="at_bh_cjrs<%=userData[i].type%><%=userData[i].petrolType%>_<%=i%>"><%=userData[i].totalBidCount%></i>
+                        <span><%=setLanguagePackage('出价次数')%></span>
+                    </div>
+                    <%}else{%>
+                    <div class="func-btn">
+                        <button class="btn  btn-cancel <%=setLanguagePackageCss('bid-btn')%>"
+                                id="at_bid_hall_cancel_<%=userData[i].type==1?'':'cg_'%><%=i%>"
+                                name="at_bid_hall_cancel_<%=userData[i].type==1?'':'cg_'%><%=i%>">
+                            <%=setLanguagePackage('取消招标')%>
+                        </button>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <%var reputationClass;%>
+        <%if (userData[i].reputationValue <= 0) {%>
+        <%reputationClass = 1;%>
+        <%} else if (userData[i].reputationValue > 0 && userData[i].reputationValue <= 150) {%>
+        <%reputationClass = 2;%>
+        <%} else if (userData[i].reputationValue > 150 && userData[i].reputationValue <= 300) {%>
+        <%reputationClass = 3;%>
+        <%} else if (userData[i].reputationValue > 300) {%>
+        <%reputationClass = 4;%>
+        <%}%>
+        <div class="con-bottom">
+            <div class="w-supplier" style="width:50%;">
+                <p style="line-height:38px;"><tt><%=userData[i].type==1?setLanguagePackage('供应商'):setLanguagePackage('采购方')%>：</tt><em><%=userData[i].companyName%></em><span
+                    class="s-credibility-<%=reputationClass%>"></span></p>
+                <div class="w-credibility">
+                    <h4><%=userData[i].companyName%></h4>
+                    <h5><tt><%=returnZhengshu(userData[i].star)%></tt><i><%=userData[i].orderSuccessCount%>&nbsp;<%=setLanguagePackage('单')%></i>
+                    </h5>
+                    <dl>
+                        <dt class="w-credibility-<%=reputationClass%>"></dt>
+                        <dd><%=setLanguagePackage('信誉值')%>：<%=userData[i].reputationValue%></dd>
+                    </dl>
+                    <%if (userData[i].followed != null) {%>
+                    <div class="focus_on <%=userData[i].followed ? 'special' : ''%>"
+                         data-userid="<%=userData[i].userId%>" id="at_bh_gz<%=i%>" name="at_bh_gz<%=i%>">
+                        <%=userData[i].followed ? setLanguagePackage('已关注'): setLanguagePackage('关注')%>
+                    </div>
+                    <%if (list[i].followed){%>
+                    <div class="focus_on_text"><%=setLanguagePackage('已接收该商家发布招标通知')%></div>
+                    <%}else{%>
+                    <div class="focus_on_text"><%=setLanguagePackage('关注，接收该商家发布招标通知')%></div>
+                    <%}%>
+                    <%}%>
+                </div>
+            </div>
+            <div class="func-time" style="line-height: 40px;">
+                <%if(userData[i].status == 1){%>
+                <span class="count"><%=setLanguagePackage('距开始')%>：<em class="j-count"></em></span>
+                <%}else if(userData[i].status == 2){%>
+                <%if(userData[i].totalBidCount>0){%>
+                <span class="count color-red"><%=setLanguagePackage('距结束')%>：<em class="j-count"><%=userData[i].endTime%></em></span>
+                <%} else {%>
+
+                <span class="count "><%=setLanguagePackage('距结束')%>：<em
+                    class="j-count"><%=userData[i].endTime%></em></span>
+                <%}%>
+                <%}%>
+                <span class="start"><%=setLanguagePackage('发布时间')%>：<%=dateYMDHMSFormat(userData[i].createTime)%></span>
+            </div>
+        </div>
+    </div>
+    <%}%>
+    <%}%>
+    <!--我发布的竞价中的招标 end-->
+
+    <!--热门招标招标 begin-->
+    <h1 class="title hot-title"><%=setLanguagePackage('热门招标')%></h1>
+    <%for(var i = 0; i < list.length; i++){%>
+    <div class="item" data-tenderId="<%=list[i].id%>" data-userId="<%=list[i].userId%>"
+         data-bidType="<%=list[i].type%>" data-status="<%=list[i].status%>" data-contractId="<%=list[i].contractId%>">
+        <div class="con-top clearfloat">
+            <div class="bid-cover">
+                <img src="<%=list[i].images%>" alt="" id="at_bid_hall_img_<%=i%>" name="at_bid_hall_img_<%=i%>"/>
+                <%if(list[i].status == 1){%>
+                <div class="sign <%=setLanguagePackage('sign-show')%>"></div>
+                <%}else if(list[i].status == 2){%>
+                <div class="sign <%=setLanguagePackage('sign-bidding')%>"></div>
+                <%}else if(list[i].status == 3){%>
+                <div class="sign <%=setLanguagePackage('sign-finished')%>"></div>
+                <%}else{%>
+                <div class="sign <%=setLanguagePackage('sign-cancle')%>"></div>
+                <%}%>
+            </div>
+            <div class="detail">
+                <p class="title" id="at_bid_hall_title_<%=list[i].type==1?'':'cg_'%><%=i%>"
+                   name="at_bid_hall_title_<%=list[i].type==1?'':'cg_'%><%=i%>"><%=list[i].title%></p>
+                <div class="bid-label">
+                    <!--状态:1公示中,2竞价中,3已结束,4已取消 , 热门招标里不会有我发布的竞价中的标-->
+                    <%if(list[i].status == 2){%>
+                    <%if(userList.login && list[i].collected){%>
+                    <span class="color-41"><%=setLanguagePackage('已出价')%></span>
+                    <%}else{%>
+                    <span class="color-41"><%=setLanguagePackage('竞价中')%></span>
+                    <%}%>
+                    <%}else if(list[i].status == 3){%>
+                    <%if(userList.login){%>
+                    <!--发标方-->
+                    <%if(list[i].userId == userList.data.id){%>
+                    <%if(list[i].successQuantity > 0){%>
+                    <span class="color-41"><%=setLanguagePackage('招标成功')%></span>
+                    <%}else{%>
+                    <%=setLanguagePackage('招标失败')%>
+                    <%}%>
+                    <!--竞价方-->
+                    <%}else{%>
+                    <%if(list[i].successBuyQuantity  > 0){%>
+                    <span class="color-41"><%=setLanguagePackage('已中标')%></span>
+                    <%}else if(list[i].successBuyQuantity == 0){%>
+                    <%=setLanguagePackage('未中标')%>
+                    <%}else{%>
+                    <%=setLanguagePackage('已结束')%>
+                    <%}%>
+                    <%}%>
+                    <%}else{%>
+                    <%=setLanguagePackage('已结束')%>
+                    <%}%>
+                    <%}else if(list[i].status == 4){%>
+                    <%=setLanguagePackage('已取消')%>
+                    <%}%>
+                </div>
+
+                <div class="con <%=setLanguagePackageCss('label')%> clearfloat">
+                    <%var applyAmountClass;%>
+                    <%if(list[i].type == 1){%>
+                    <%applyAmountClass = 1;%>
+                    <%}else{%>
+                    <%applyAmountClass = 2;%>
+                    <%}%>
+
+                    <%var totalBuyClass;%>
+                    <%if(list[i].type == 1){%>
+                    <%totalBuyClass = 2;%>
+                    <%}else{%>
+                    <%totalBuyClass = 1;%>
+                    <%}%>
+                    <div class="quality">
+                        <p class="" id="at_bh_jmlt<%=list[i].type%><%=list[i].petrolType%>_<%=i%>"
+                           name="at_bh_jmlt<%=list[i].type%><%=list[i].petrolType%>_<%=i%>">
+                            <label class="w-apply-<%=applyAmountClass%>"><%=list[i].type==1?setLanguagePackage('竞买量'):setLanguagePackage('采购量')%></label>
+                            <span><%=list[i].totalQuantity%><%=setLanguagePackage('吨')%></span>
+                        </p>
+                        <%if(list[i].totalBuyQuantity != null){%>
+                        <p class="apply-amount" id="at_bh_smlt<%=list[i].type%><%=list[i].petrolType%>_<%=i%>"
+                           name="at_bh_smlt<%=list[i].type%><%=list[i].petrolType%>_<%=i%>">
+                            <label class="w-apply-<%=totalBuyClass%>"><%=list[i].type==1?setLanguagePackage('申买量'):setLanguagePackage('供应量')%></label>
+                            <span>
+                                <%=list[i].totalBuyQuantity%><%=setLanguagePackage('吨')%>
+                            </span>
+                        </p>
+                        <%}%>
+                    </div>
+                    <div class="purchase <%=setLanguagePackageCss('purchase')%>">
+                        <p class="total" id="at_bh_totalt<%=list[i].type%><%=list[i].petrolType%>_<%=i%>"
+                           name="at_bh_totalt<%=list[i].type%><%=list[i].petrolType%>_<%=i%>">
+                            <%if(list[i].showPrice == null){%>
+                            <span>￥--</span>
+                            <%}else{%>
+                            <span>￥<%=(list[i].showPrice).toFixed(2)%>/<%=setLanguagePackage('吨')%></span>&nbsp;<%=setLanguagePackage('起')%>
+                            <%}%>
+                        </p>
+                        <%if(list[i].successQuantity != null){%>
+                        <p class="success-amount <%=setLanguagePackageCss('success-amount-national')%>">
+                            <label id="at_bh_zblt<%=list[i].type%><%=list[i].petrolType%>_<%=i%>"
+                                   name="at_bh_zblt<%=list[i].type%><%=list[i].petrolType%>_<%=i%>">
+                                <!--竞价方-参与过得显示我的中标量，发标方显示中标量-->
+                                <%if(userList.login && list[i].collected){%>
+                                <%=setLanguagePackage('我的中标量')%>：<%=list[i].successBuyQuantity%><%=setLanguagePackage('吨')%>
+                                <%}else if(userList.login && list[i].userId == userList.data.id){%>
+                                <%=setLanguagePackage('中标量')%>：<%=list[i].successQuantity%><%=setLanguagePackage('吨')%>
+                                <%}%>
+                            </label>
+                            <span></span>
+                        </p>
+                        <%}%>
+                    </div>
+
+                    <%if(list[i].status == 2){%>
+                    <!--发布方显示出价次数-->
+                    <%if(userList.login && userList.data.id == list[i].userId){%>
+                    <%if(list[i].totalBidCount){%>
+                    <div class="bid-number">
+                        <i id="at_bh_cjrst<%=list[i].type%><%=list[i].petrolType%>_<%=i%>"
+                           name="at_bh_cjrst<%=list[i].type%><%=list[i].petrolType%>_<%=i%>"><%=list[i].totalBidCount%></i>
+                        <span><%=setLanguagePackage('出价次数')%></span>
+                    </div>
+                    <%}%>
+                    <!--未登录、登陆未竞价过、实际出价者 显示出价按钮(管理员不能出价交易员的标)-->
+                    <%}else if(!userList.login || !list[i].collected || userList.data.id == list[i].collectedUserId){%>
+                    <div class="func-btn">
+                        <button
+                            class="btn btn-offer <%=setLanguagePackageCss('bid-btn')%>  btn-<%=list[i].type==1?'blue':'green'%>"
+                            id="at_bid_hall_bid_<%=list[i].type==1?'':'cg_'%><%=i%>"
+                            name="at_bid_hall_bid_<%=list[i].type==1?'':'cg_'%><%=i%>"><%=setLanguagePackage('出价')%>
+                        </button>
+                    </div>
+                    <%}%>
+                    <%}else if(list[i].status == 3){%>
+                    <!--我参与已中标未签协议-->
+                    <%if(list[i].collected && list[i].successBuyQuantity>0 && list[i].signStatus == 0){%>
+                    <div class="func-btn">
+                        <button
+                            class="btn btn-sign <%=setLanguagePackageCss('bid-btn')%>  btn-<%=list[i].type==1?'blue':'green'%>"
+                            id="at_bid_hall_sign_<%=i%>" name="at_bid_hall_sign_<%=i%>"><%=setLanguagePackage('去签协议')%>
+                        </button>
+                    </div>
+                    <%}else if(list[i].totalBidSuccessUser){%>
+                    <div class="bid-number">
+                        <i id="at_bh_zbrst<%=list[i].type%><%=list[i].petrolType%>_<%=i%>"
+                           name="at_bh_zbrst<%=list[i].type%><%=list[i].petrolType%>_<%=i%>"><%=list[i].totalBidSuccessUser%></i>
+                        <span><%=setLanguagePackage('中标人数')%></span>
+                    </div>
+                    <%}%>
+                    <%}else if(list[i].status == 1){%>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+
+        <%var reputationClass;%>
+        <%if (list[i].reputationValue <= 0) {%>
+        <%reputationClass = 1;%>
+        <%} else if (list[i].reputationValue > 0 && list[i].reputationValue <= 150) {%>
+        <%reputationClass = 2;%>
+        <%} else if (list[i].reputationValue > 150 && list[i].reputationValue <= 300) {%>
+        <%reputationClass = 3;%>
+        <%} else if (list[i].reputationValue > 300) {%>
+        <%reputationClass = 4;%>
+        <%}%>
+        <div class="con-bottom">
+            <div class="w-supplier" style="width:50%;">
+                <p><tt><%=list[i].type==1?setLanguagePackage('供应商'):setLanguagePackage('采购方')%>：</tt><em><%=list[i].companyName%></em><span
+                    class="s-credibility-<%=reputationClass%>"></span></p>
+                <div class="w-credibility">
+                    <h4><%=list[i].companyName%></h4>
+                    <h5><tt><%=returnZhengshu(list[i].star)%></tt><i><%=list[i].orderSuccessCount%>&nbsp;<%=setLanguagePackage('单')%></i>
+                    </h5>
+                    <dl>
+                        <dt class="w-credibility-<%=reputationClass%>"></dt>
+                        <dd><%=setLanguagePackage('信誉值')%>：<%=list[i].reputationValue%></dd>
+                    </dl>
+                    <%if (list[i].followed != null) {%>
+                    <div class="focus_on <%=list[i].followed ? 'special' : ''%>" data-userid="<%=list[i].userId%>"
+                         id="at_bh_gzt<%=i%>" name="at_bh_gzt<%=i%>"><%=list[i].followed ? setLanguagePackage('已关注'):
+                        setLanguagePackage('关注')%>
+                    </div>
+                    <%if (list[i].followed){%>
+                    <div class="focus_on_text"><%=setLanguagePackage('已接收该商家发布招标通知')%></div>
+                    <%}else{%>
+                    <div class="focus_on_text"><%=setLanguagePackage('关注，接收该商家发布招标通知')%></div>
+                    <%}%>
+                    <%}%>
+                </div>
+            </div>
+            <div class="func-time">
+                <%if(list[i].status == 1){%>
+                <span class="count"><%=setLanguagePackage('距开始')%>：<em class="j-count"></em></span>
+                <%}else if(list[i].status == 2){%>
+                <%if(list[i].totalBidCount>0){%>
+                <span class="count color-red"><%=setLanguagePackage('距结束')%>：<em
+                    class="j-count"><%=list[i].endTime%></em></span>
+                <%} else {%>
+                <span class="count "><%=setLanguagePackage('距结束')%>：<em class="j-count"><%=list[i].endTime%></em></span>
+                <%}%>
+                <%}%>
+                <span class="start"><%=setLanguagePackage('发布时间')%>：<%=dateYMDHMSFormat(list[i].createTime)%></span>
+            </div>
+        </div>
+        <%if(list[i].bidUserName){%>
+        <div class="manager-bidding-detail clearfloat">
+            <span>
+             <!--区分 竞价中、已中标、未中标-->
+                <%if(list[i].status == 2){%>
+                    <%=list[i].bidUserName%>(<%=list[i].bidUserCompanyName%>),正在竞价该招标 ...
+                <%}else if(list[i].status == 3 && list[i].successBuyQuantity>0){%>
+                    <%=list[i].bidUserName%>(<%=list[i].bidUserCompanyName%>),参与竞价该招标【已中标】
+                <%}else{%>
+                    <%=list[i].bidUserName%>(<%=list[i].bidUserCompanyName%>),参与竞价该招标【未中标】
+                <%}%>
+            </span>
+        </div>
+        <%}%>
+    </div>
+    <%}%>
+    <!--热门招标招标 end</script><script id=t:top_search type=text/html><div class="item search">
+        <p><%=setLanguagePackage('搜索招标')%></p>
+        <div>
+            <i></i>
+            <input type="text" placeholder="<%=setLanguagePackage('搜索名称')%>"/>
+        </div>
+        <div class="item select" style="margin-top: 20px">
+            <p><%=setLanguagePackage('筛选条件')%></p>
+            <ul>
+                <li class="active" data-type="1"><%=setLanguagePackage('全部招标')%></li>
+                <li data-type="2"><%=setLanguagePackage('我参与的招标')%></li>
+                <li data-type="3"><%=setLanguagePackage('我发布的招标')%></li>
+                <li data-type="5"><%=setLanguagePackage('我关注的招标')%></li>
+                <li data-type="4"><%=setLanguagePackage('历史招标')%></li>
+            </ul>
+        </div>
+    </div></script><script id=t:j_news_modular type=text/html><ul>
+        <%for(var i = 0; i < list.length; i++){%>
+        <li data-id="<%=list[i].id%>">
+            <i class="icon-news"></i>
+            <span class="news-words"><%=#list[i].rollingContent%></span>
+            <i class="news-close"></i>
+        </li>
+        <%}%>
+    </ul></script><script id=t:followMain type=text/html><div class="followInner">
+        <p class="followTip">
+            订阅成功后，平台如有符合您要求的招标，我们将在第一时间以短信形式通知您～ 如不想继续关注，您也可以在我的关注中取消关注～
+        </p>
+        <div class="thItem">
+            <div class="thTltle">
+                常规指标
+            </div>
+            <div class="thChildItem">
+                <div class="thChildTitle">
+                    <%=setLanguagePackage('硫')%>（%）
+                </div>
+                <ul class="suList modleList clearfloat">
+                    <li id="at_bid_hall_su1" name="at_bid_hall_su1" class="<%=suValue==9?'active':''%> com" data-maxSu="" data-minSu=""><%=setLanguagePackage('所有硫含量')%></li>
+                    <li id="at_bid_hall_su2" name="at_bid_hall_su2" class="<%=suValue==1?'active':''%> com" data-maxSu="1.0" data-minSu=""><%=setLanguagePackage('硫')%>&lt;1.0%</li>
+                    <li id="at_bid_hall_su3" name="at_bid_hall_su3" class="<%=suValue==2?'active':''%> com" data-maxSu="1.5" data-minSu="1.0"><%=setLanguagePackage('硫')%>1.0-1.5</li>
+                    <li id="at_bid_hall_su4" name="at_bid_hall_su4" class="<%=suValue==3?'active':''%> com" data-maxSu="2.0" data-minSu="1.5"><%=setLanguagePackage('硫')%>1.5-2.0</li>
+                    <li id="at_bid_hall_su5" name="at_bid_hall_su5" class="<%=suValue==4?'active':''%> com" data-maxSu="3.0" data-minSu="2.0"><%=setLanguagePackage('硫')%>2.0-3.0</li>
+                    <li id="at_bid_hall_su6" name="at_bid_hall_su6" class="<%=suValue==5?'active':''%> com" data-maxSu="4.0" data-minSu="3.0"><%=setLanguagePackage('硫')%>3.0-4.0</li>
+                    <li id="at_bid_hall_su7" name="at_bid_hall_su7" class="<%=suValue==6?'active':''%> com" data-maxSu="5.0" data-minSu="4.0"><%=setLanguagePackage('硫')%>4.0-5.0</li>
+                    <li id="at_bid_hall_su8" name="at_bid_hall_su8" class="<%=suValue==7?'active':''%> com" data-max="" data-minSu="5.0"><%=setLanguagePackage('硫')%>≥5.0</li>
+                    <li id="at_bid_hall_su9" name="at_bid_hall_su9" class="<%=suValue==8?'active':''%> spe" data-max="" data-minSu="">
+                        <%if(suValue == 8){%>
+                        自定义<%=setLanguagePackage('硫')%>=<%=su%>
+                        <%}else{%>
+                        <%=setLanguagePackage('自定义含量')%>
+                        <%}%>
+                    </li>
+                </ul>
+            </div>
+            <%if(data == 1|| data == 3){%>
+            <div class="thChildItem">
+                <div class="thChildTitle">
+                    <%=setLanguagePackage('灰分')%>（%）
+                </div>
+                <ul class="ashList modleList clearfloat">
+                    <li id="at_bid_hall_ash1" name="at_bid_hall_ash1" class="<%=ashValue==5?'active':''%> com" data-maxAsh="" data-minAsh=""><%=setLanguagePackage('所有灰分含量')%></li>
+                    <li id="at_bid_hall_ash2" name="at_bid_hall_ash2" class="<%=ashValue==1?'active':''%> com" data-maxAsh="0.5" data-minAsh=""><%=setLanguagePackage('灰分')%>&lt;0.5%</li>
+                    <li id="at_bid_hall_ash3" name="at_bid_hall_ash3" class="<%=ashValue==2?'active':''%> com" data-maxAsh="1.0" data-minAsh="0.5"><%=setLanguagePackage('灰分')%>0.5%-1.0%</li>
+                    <li id="at_bid_hall_ash4" name="at_bid_hall_ash4" class="<%=ashValue==3?'active':''%> com" data-maxAsh="" data-minAsh="1.0"><%=setLanguagePackage('灰分')%>≥1.0%</li>
+                    <li id="at_bid_hall_ash5" name="at_bid_hall_ash5" class="<%=ashValue==4?'active':''%> spe" data-maxAsh="" data-minAsh="">
+                        <%if(ashValue == 4){%>
+                        自定义<%=setLanguagePackage('灰分')%>=<%=ash%>
+                        <%}else{%>
+                        <%=setLanguagePackage('自定义含量')%>
+                        <%}%>
+                    </li>
+                </ul>
+            </div>
+            <%}else if(data == 2){%>
+            <div class="thChildItem">
+                <div class="thChildTitle">
+                    <%=setLanguagePackage('真密度')%>（g/cm³）
+                </div>
+                <ul class="densityList modleList clearfloat">
+                    <li id="at_bid_hall_den1" name="at_bid_hall_den1" class="<%=densityValue==7?'active':''%> com" data-maxTensity="" data-minTensity=""><%=setLanguagePackage('所有真密度含量')%></li>
+                    <li id="at_bid_hall_den2" name="at_bid_hall_den2" class="<%=densityValue==1?'active':''%> com" data-maxTensity="2.00" data-minTensity="1.98"><%=setLanguagePackage('真密度')%>1.98-2.00</li>
+                    <li id="at_bid_hall_den3" name="at_bid_hall_den3" class="<%=densityValue==2?'active':''%> com" data-maxTensity="2.03" data-minTensity="2.00"><%=setLanguagePackage('真密度')%>2.00-2.03</li>
+                    <li id="at_bid_hall_den4" name="at_bid_hall_den4" class="<%=densityValue==3?'active':''%> com" data-maxTensity="2.06" data-minTensity="2.03"><%=setLanguagePackage('真密度')%>2.03-2.06</li>
+                    <li id="at_bid_hall_den5" name="at_bid_hall_den5" class="<%=densityValue==4?'active':''%> com" data-maxTensity="2.08" data-minTensity="2.06"><%=setLanguagePackage('真密度')%>2.06-2.08</li>
+                    <li id="at_bid_hall_den6" name="at_bid_hall_den6" class="<%=densityValue==5?'active':''%> com" data-maxTensity="" data-minTensity="2.08"><%=setLanguagePackage('真密度')%>≥2.08</li>
+                    <li id="at_bid_hall_den8" name="at_bid_hall_den7" class="<%=densityValue==6?'active':''%> spe">
+                        <%if(densityValue == 6){%>
+                        自定义<%=setLanguagePackage('真密度')%>=<%=density%>
+                        <%}else{%>
+                        <%=setLanguagePackage('自定义含量')%>
+                        <%}%>
+                    </li>
+                </ul>
+            </div>
+            <%}%>
+            <div class="thChildItem">
+                <div class="thChildTitle">
+                    <%=setLanguagePackage('钒')%>（ppm）
+                </div>
+                <ul class="vaList modleList clearfloat">
+                    <li id="at_bid_hall_va1" name="at_bid_hall_va1" class="<%=vaValue==9?'active':''%> com" data-maxVa="" data-minVa=""><%=setLanguagePackage('所有钒含量')%></li>
+                    <li id="at_bid_hall_va2" name="at_bid_hall_va2" class="<%=vaValue==1?'active':''%> com" data-maxVa="100" data-minVa=""><%=setLanguagePackage('钒')%>&lt;100</li>
+                    <li id="at_bid_hall_va3" name="at_bid_hall_va3" class="<%=vaValue==2?'active':''%> com" data-maxVa="150" data-minVa="100"><%=setLanguagePackage('钒')%>100-150</li>
+                    <li id="at_bid_hall_va4" name="at_bid_hall_va4" class="<%=vaValue==3?'active':''%> com" data-maxVa="250" data-minVa="150"><%=setLanguagePackage('钒')%>150-250</li>
+                    <li id="at_bid_hall_va5" name="at_bid_hall_va6" class="<%=vaValue==4?'active':''%> com" data-maxVa="350" data-minVa="250"><%=setLanguagePackage('钒')%>250-350</li>
+                    <li id="at_bid_hall_va6" name="at_bid_hall_va6" class="<%=vaValue==5?'active':''%> com" data-maxVa="450" data-minVa="350"><%=setLanguagePackage('钒')%>350-450</li>
+                    <li id="at_bid_hall_va7" name="at_bid_hall_va7" class="<%=vaValue==6?'active':''%> com" data-maxVa="500" data-minVa="450"><%=setLanguagePackage('钒')%>450-500</li>
+                    <li id="at_bid_hall_va8" name="at_bid_hall_va8" class="<%=vaValue==7?'active':''%> com" data-maxVa="" data-minVa="500"><%=setLanguagePackage('钒')%>≥500</li>
+                    <li id="at_bid_hall_va9" name="at_bid_hall_va9" class="<%=vaValue==8?'active':''%> spe" data-maxVa="" data-minVa="">
+                        <%if(vaValue == 8){%>
+                        自定义<%=setLanguagePackage('钒')%>=<%=va%>
+                        <%}else{%>
+                        <%=setLanguagePackage('自定义含量')%>
+                        <%}%>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="thItem">
+            <div class="thTltle">
+                产地
+            </div>
+            <div class="thChildItem">
+                <ul class="placeList modleList clearfloat">
+                    <li id="at_bid_hall_place1" name="at_bid_hall_place1" class="<%=productArea=='所有产地'?'active':''%> com" data-value="所有产地"><%=setLanguagePackage('所有产地')%></li>
+                    <li id="at_bid_hall_place2" name="at_bid_hall_place2" class="<%=productArea=='东北地区'?'active':''%> com" data-value="东北地区"><%=setLanguagePackage('东北地区')%></li>
+                    <li id="at_bid_hall_place3" name="at_bid_hall_place3" class="<%=productArea=='华东地区'?'active':''%> com" data-value="华东地区"><%=setLanguagePackage('华北地区')%></li>
+                    <li id="at_bid_hall_place4" name="at_bid_hall_place4" class="<%=productArea=='华东地区'?'active':''%> com" data-value="华东地区"><%=setLanguagePackage('华东地区')%></li>
+                    <li id="at_bid_hall_place5" name="at_bid_hall_place5" class="<%=productArea=='华南地区'?'active':''%> com" data-value="华南地区"><%=setLanguagePackage('华南地区')%></li>
+                    <li id="at_bid_hall_place6" name="at_bid_hall_place6" class="<%=productArea=='华中地区'?'active':''%> com" data-value="华中地区"><%=setLanguagePackage('华中地区')%></li>
+                    <li id="at_bid_hall_place7" name="at_bid_hall_place7" class="<%=productArea=='西北地区'?'active':''%> com" data-value="西北地区"><%=setLanguagePackage('西北地区')%></li>
+                    <li id="at_bid_hall_place8" name="at_bid_hall_place8" class="<%=productArea=='西南地区'?'active':''%> com" data-value="西南地区"><%=setLanguagePackage('西南地区')%></li>
+                    <li id="at_bid_hall_place9" name="at_bid_hall_place9" class="<%=productArea=='其他'?'active':''%> com" data-value="其他"><%=setLanguagePackage('其他')%></li>
+                </ul>
+            </div>
+        </div>
+        <div class="thItem">
+            <div class="thTltle">
+                所有标签
+            </div>
+            <div class="thChildItem">
+                <ul class="labelList modleList clearfloat">
+                    <li id="at_bid_hall_label11" name="at_bid_hall_label11" class="<%=label=='所有标签'?'active':''%> com" data-label=""><%=setLanguagePackage('所有标签')%></li>
+                    <%if(data == 1){%>
+                    <li id="at_bid_hall_label1" name="at_bid_hall_label1" class="<%=label=='1'?'active':''%> com" data-label="1"><%=setLanguagePackage('海绵焦')%></li>
+                    <li id="at_bid_hall_label2" name="at_bid_hall_label2" class="<%=label=='2'?'active':''%> com" data-label="2"><%=setLanguagePackage('弹丸焦')%></li>
+                    <li id="at_bid_hall_label3" name="at_bid_hall_label3" class="<%=label=='3'?'active':''%> com" data-label="3"><%=setLanguagePackage('针状焦')%></li>
+                    <%} else if(data == 2){%>
+                    <li id="at_bid_hall_label4" name="at_bid_hall_label4" class="<%=label=='4'?'active':''%> com" data-label="4"><%=setLanguagePackage('煅烧石油焦')%></li>
+                    <li id="at_bid_hall_label5" name="at_bid_hall_label5" class="<%=label=='5'?'active':''%> com" data-label="5"><%=setLanguagePackage('增碳剂')%></li>
+                    <li id="at_bid_hall_label6" name="at_bid_hall_label6" class="<%=label=='6'?'active':''%> com" data-label="6"><%=setLanguagePackage('收尘粉')%></li>
+                    <%} else if(data == 3){%>
+                    <li id="at_bid_hall_label7" name="at_bid_hall_label7" class="<%=label=='7'?'active':''%> com" data-label="7"><%=setLanguagePackage('冶金焦')%></li>
+                    <li id="at_bid_hall_label8" name="at_bid_hall_label8" class="<%=label=='8'?'active':''%> com" data-label="8"><%=setLanguagePackage('铸造焦')%></li>
+                    <li id="at_bid_hall_label9" name="at_bid_hall_label9" class="<%=label=='9'?'active':''%> com" data-label="9"><%=setLanguagePackage('铁合金焦')%></li>
+                    <li id="at_bid_hall_label10" name="at_bid_hall_label10" class="<%=label=='10'?'active':''%> com" data-label="10"><%=setLanguagePackage('有色金属冶炼用焦')%></li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </div></script><script src=./plugin/particles.min.js type=text/javascript></script><script>/* ---- particles.js config ---- */
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 200,
+                "density": {
+                    "enable": true,
+                    "value_area": 3000
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 200,
+                    "height": 500
+                }
+            },
+            "opacity": {
+                "value": 0.3,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 10,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 20,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 300,
+                "color": "#ffffff",
+                "opacity": 0.2,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 0.7,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": false,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": false,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 240,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });</script>

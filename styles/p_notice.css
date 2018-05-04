@@ -1,0 +1,30 @@
+.theme input[type='checkbox'], .item .oneMsg{
+    margin: 2px 6px 0 0;
+    width: 18px;
+    height: 18px;
+    border-color: #e4e4e4;
+}
+.theme #allMsg{
+    margin: 0 6px 2px 0;
+}
+.notice-box .item .detail{
+    margin-left:29px;
+}
+.theme #allMsg:hover{
+    border-color: #999999;
+}
+.theme #allMsg:checked{
+    background: #fff;
+    border:1px solid #999999;
+}
+.item .oneMsg:checked:checked::after {
+    content: url("../images/main/check_mark.png");
+    display: block;
+    position: absolute;
+}
+.theme #allMsg:checked:checked::after{
+    content: url("../images/main/check_mark.png");
+    display: block;
+    position: relative;
+    bottom: 20%;
+}

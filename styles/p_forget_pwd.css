@@ -1,0 +1,96 @@
+.forgetBox{
+    padding: 20px 40px;
+    background-color: #fff;
+}
+.forgetBox .title{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+/*验证手机*/
+.forgetBox .mod-tel{
+    display: block;
+}
+.theme{
+    height: 36px;
+    line-height: 36px;
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff;
+}
+.theme1{
+    background: url(../images/main/s1.png) no-repeat center center/100% 100%;
+}
+.theme p{
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+ul.con{
+    margin: 50px 30px 30px 30px;
+    font-size: 14px;
+}
+ul.con li{
+    height: 59px;
+}
+ul.con li label{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+ul.con li input{
+    border: solid 1px #ececec;
+    height: 40px;
+    width: 250px;
+    padding-left: 10px;
+    margin: 0 6px 0 0;
+}
+ul.con li p{
+    margin-left: 100px;
+    color: red;
+}
+ul.con li span.error{
+    color: red;
+    font-size: 12px;
+}
+ul.con li a{
+    display: inline-block;
+    color: #5b8ed2;
+    padding: 10px;
+    border: 1px solid;
+}
+ul.con li button{
+    border: 0;
+    background: #5b8ed2;
+    color: #fff;
+    padding: 10px;
+    margin: 0 0 0 202px;
+    width: 100px;
+}
+
+/*重置密码*/
+.mod-pwd{
+    display: none;
+}
+
+.theme2{
+    background: url('../images/main/s2.png') no-repeat center center/100% 100%;
+}
+
+/*完成*/
+.mod-finish{
+    display: none;
+}
+.theme3{
+    background: url('../images/main/s3.png') no-repeat center center/100% 100%;
+}
+div.con{
+    margin: 50px 30px 30px 30px;
+    font-size: 14px;
+}
+div.con>img,
+div.con>div{
+    float: left;
+}
+div.con>img{
+    margin-right: 10px;
+}

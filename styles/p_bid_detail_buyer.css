@@ -1,0 +1,508 @@
+a {
+    color: #454545;
+}
+
+a:active {
+    color: #454545;
+}
+
+.bid-detail {
+    width: 1080px;
+    margin: 90px auto 0 auto;
+    min-height:-moz-calc(100% - 286px);
+    min-height:-webkit-calc(100% - 286px);
+    min-height: calc(100% - 286px);
+}
+
+.bid-detail .title {
+    height: 61px;
+    margin: 0 0 20px 0;
+    padding: 20px 33px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.bid-detail .title a:hover{
+    color: #5b8ed2;
+}
+
+/*Ã¥Â·Â¦Ã¤Â¾Â§Ã©Æ’Â¨Ã¥Ë†â€  fl*/
+.bid-detail .con .bidding {
+    padding: 30px 30px 0px 33px;
+    background-color: #fff;
+    margin-right: 18px;
+}
+
+.bid-detail .con .bidding > div {
+    width: 698px;
+    padding-bottom: 30px;
+}
+
+/*Ã§Â«Å¾Ã¤Â»Â·Ã¥â€¢â€ Ã¥â€œÂ*/
+.bidding .bidding-company {
+    padding-bottom: 16px;
+    position: relative;
+}
+
+.bidding-company .goods-company{
+    position: absolute;
+    left: -1px;
+    top: 147px;
+}
+
+.bidding-company .goods-img {
+    /* position: relative; */
+    float: left;
+    /* margin-right: 30px; */
+    width: 163px;
+    /* display: inline-block; */
+    /* overflow: hidden; */
+}
+
+.bidding-company .goods-img {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.bidding-company .goods-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.bidding-company .goods-img img.height {
+    height: 100%;
+    width: auto;
+}
+
+.bidding-company .goods-img img.width {
+    width: 100%;
+    height: auto;
+}
+
+.bidding-company .produce {
+    width: 407px;
+}
+
+.bidding-company .produce h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.bidding-company .produce p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.bidding-company .produce p.basic-title {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.bidding-company .produce .m-content {
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+}
+
+.bidding-company .produce .content-menu {
+    position: absolute;
+    top: -44px;
+    left: 215px;
+    padding: 20px;
+    width: 250px;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 0px 5px #E4E4E4;
+    background-color: #fff;
+    border-radius: 3px;
+    white-space: normal;
+    z-index: 100;
+}
+
+.bidding-company .produce p label {
+    float: left;
+    color: #9d9d9d;
+    display: inline-block;
+    width: 78px;
+}
+
+.bidding-company .produce p i {
+    font-style: normal;
+}
+
+.bidding-company .produce p span{
+    /* float: left; */
+    width: 430px;
+}
+
+.bidding-company .fuc-btn {
+    position: absolute;
+    right: 2px;
+    top: 124px;
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    background-color: #5b8ed2;
+    cursor: pointer;
+}
+
+.bidding-company .btn-blue {
+    background-color: #5b8ed2;
+}
+
+.bidding-company .btn-green {
+    background-color: #4CB050;
+}
+
+.bidding-company > div:last-child {
+    text-align: right;
+    width: 80px;
+    position: absolute;
+    right: 2px;
+}
+
+.bidding-company > div:last-child > span {
+    display: block;
+    margin-left: 27px;
+}
+
+.bidding-company > div:last-child .block {
+    margin: 10px 0 6px;
+}
+
+.bidding-company .enter-bidding-rule {
+    position: absolute;
+    bottom: 65px;
+    right: 2px;
+    font-size: 14px;
+    color: #5b8ed2;
+    display: block;
+    text-decoration:underline;
+}
+
+/*Ã¦Ë†â€˜Ã§Å¡â€žÃ§Â«Å¾Ã¤Â»Â·*/
+.bidding .bidding-me {
+    padding: 30px 0;
+    font-size: 14px;
+    border-top: solid 1px #ececec;
+    position: relative;
+}
+
+.bidding-me .rank-module{
+    float: left;
+    text-align: center;
+    /*width: 100px;*/
+    width: 210px;;
+    margin-left: 20px;
+    /*margin-right: 70px;*/
+
+}
+
+.bidding-me .rank-module div{
+    margin-bottom: 30px;
+}
+
+.bidding-me .rank-module p {
+    display: block;
+    color: #5b8ed2;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bidding-me .rank-module p.rank {
+    font-size: 26px;
+}
+
+.bidding-me .rank-module label {
+    display: block;
+}
+
+/*.bidding-me .rank > em {*/
+    /*color: #5b8ed2;*/
+    /*font-weight: 500;*/
+/*}*/
+
+.bidding-me .current-price {
+    /*margin-left: 52px;*/
+    margin-bottom: 12px;
+    /*float: left;*/
+}
+
+.bidding-me .change-price {
+    /*margin-left: 52px;*/
+    float: left;
+}
+
+.bidding-me .current-price p {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.buy-amount {
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ececec;
+    text-align: center;
+    margin-right: 6px;
+}
+
+.bidding-me .change-price p {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.bidding-me .change-price .start-price {
+    display: inline-block;
+    color: #363636;
+    font-size: 14px;
+    line-height: 30px;
+    vertical-align: super;
+    margin-left: 6px;
+}
+.bidding-me .change-price .start-price .consumer{
+    color: #5b8ed2;
+    font-weight: bold;
+    margin: 0 6px;
+    font-size: 16px;
+}
+.bidding-me .change-price p:nth-child(1){
+    height: 36px;
+    line-height: 36px;
+}
+.bidding-me .change-price p:nth-child(2) {
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bidding-me label {
+    color: #9d9d9d;
+    /*margin-right: 4px;*/
+}
+
+.bidding-me .change-price p label {
+    color: #9d9d9d;
+    width: 70px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+
+.bidding-me .current-price p em,
+.bidding-me .change-price p em {
+    color: #5b8ed2;
+}
+
+.bidding-me .change-price p .total-amount {
+    color: #5b8ed2;
+    font-size: 24px;
+    margin-right: 4px;
+}
+
+.bidding-me .change-price p .buyCount,
+.bidding-me .change-price p .buyPrice {
+    border-top: solid 1px #ececec;
+    border-bottom: solid 1px #ececec;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+.bidding-me .change-price p .buyCount {
+    width: 180px;
+}
+
+.bidding-me .change-price p .buyPrice {
+    width: 92px;
+}
+
+.bidding-me .change-price .m-criticalPrice {
+    display: inline-block;
+    color: #9d9d9d;
+    margin-left: 15px;
+    height: 36px;
+    line-height: 30px;
+}
+
+/*Ã¥â€¡ÂºÃ¤Â»Â·*/
+.bidding-bid {
+    padding: 60px 0;
+    text-align: center;
+    border-top: solid 1px #ececec;
+}
+
+.bidding-bid button {
+    border: 0;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/*Ã¥ÂÂ³Ã¤Â¾Â§Ã©Æ’Â¨Ã¥Ë†â€  fl*/
+.tab {
+    width: 300px;
+    margin-top: 30px;
+}
+
+.tab ul li {
+    background-color: #ffffff;
+    padding: 13px 0;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    width: 150px;
+    border-bottom: solid 1px #ececec;
+    color: #9d9d9d;
+    cursor: pointer;
+}
+
+.current-s {
+    background-color: #ffffff !important;
+    color: #5b8ed2 !important;
+}
+
+.tab .tableBox {
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+.tab table {
+    font-size: 14px;
+}
+
+.tab table tr {
+    border-bottom: solid 1px #ececec;
+}
+
+.tab table tr th,
+.tab table tr td {
+    padding: 20px 0;
+    text-align: center;
+    width: 100px;
+    max-width: 100px;
+    /*word-break: break-all;*/
+    overflow: auto;
+    word-wrap: break-word;
+    line-height: 20px;
+
+}
+
+.tab table tr td.overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tab table tr th label,
+.tab table tbody {
+    color: #9d9d9d;
+}
+
+.tab table tbody tr:last-child {
+    border: 0;
+}
+
+.myBid {
+    display: none;
+}
+
+
+/*状态图标*/
+
+.bidding-company .goods-img .sign {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.bidding-company .goods-img .sign-bidding {
+    background: url('../images/bid/bidding.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.bidding-company .goods-img .sign-finished {
+    background: url('../images/bid/finished.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.bidding-company .goods-img .sign-cancle {
+    background: url('../images/bid/cancle.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/*竞价详情label固定宽度*/
+.row label{
+    width: 88px;
+    float: left;
+}
+.row span{
+    max-width: 600px;
+    float: left;
+    word-break: break-all;
+}
+.nav > li > a{
+    padding: 5px 0;
+    margin-right: 27px;
+}
+.manager-bidding-detail{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+    color: #999;
+}
+.change-price-item-en{
+    margin-left: 230px;
+}
+
+.bidding-me .change-price-item-en p label {
+    color: #9d9d9d;
+    width: 150px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+.bidding-company .produce p .coke_name{
+    height: 20px;
+    padding: 0px 10px 1px 10px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+    border:1px solid rgba(71, 186, 254, 1);
+}
+
+.review_report{
+    color: blue;
+    cursor: pointer;
+}
+span.no_content{
+    color:black ;
+}

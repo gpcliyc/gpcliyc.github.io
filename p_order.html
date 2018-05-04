@@ -1,0 +1,268 @@
+<!DOCTYPE html><html><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><title></title><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=keywords content=""><meta name=description content=""><link rel="shortcut icon" href=./images/common/logo_black.png type="image/x-icon"><meta http-equiv=Pragma content="no-cache"><meta http-equiv=Cache-Control content="no-store,must-revalidate"><meta http-equiv=Expires content="0"><link rel=stylesheet href=../.././plugin/bootstrap/css/bootstrap.css><link rel=stylesheet href=styles/base.css><link rel=stylesheet href=styles/reset.css><link rel=stylesheet href=styles/common.css><link rel=stylesheet href=styles/j.pagination.css><link rel=stylesheet href=styles/p_order_detail_offLine.css><body><div class=index-head-wrap><div id=layout_header></div></div><div class="mod-center clearfloat"><div id=j_leftMenuBlock></div><div class=mod-body><div class=order><div id=j_orderListSeachBlock></div><div class=loadingA></div><div id=j_orderList class=order-box></div><div class="clear-fixed fenye"><div id=pagination class=pagination></div><input type=hidden id=pageNum value=1></div></div></div></div><div id=layout_footer class=mod-footer></div><script src=./plugin/seajs/2.2.3/sea.js type=text/javascript></script><script src=./js/config.js type=text/javascript></script><script type=text/javascript>seajs.use("./js/p_order.js");</script><script id=t:j_leftMenuBlock type=text/html><div class="mod-menu">
+        <div class="item <%=setLanguagePackageCss('menu-li-block')%>">
+            <h1><%=setLanguagePackage('我的订单')%></h1>
+            <ul>
+                <li data-status="" class="active" id="at_omm_all" name="at_omm_all"><%=setLanguagePackage('全部订单')%><label class="total"></label></li>
+                <li data-status="1" id="at_omm_waitpay" name="at_omm_waitpay"><%=setLanguagePackage('待付款')%><label class="waitforpay"></label></li>
+                <li data-status="2" id="at_omm_waitd" name="at_omm_waitd"><%=setLanguagePackage('待提货')%><label class="waitfordelivery"></label></li>
+                <li data-status="6" id="at_omm_ding" name="at_omm_ding"><%=setLanguagePackage('提货中')%><label class="delivery"></label></li>
+                <li data-status="3" id="at_omm_we" name="at_omm_we"><%=setLanguagePackage('待验收')%><label class="waitforcheck"></label></li>
+                <li data-status="4" id="at_omm_finish" name="at_omm_finish"><%=setLanguagePackage('已完成')%><label class="success"></label></li>
+                <li data-status="5" id="at_omm_cancel" name="at_omm_cancel"><%=setLanguagePackage('已取消')%><label class="failed"></label></li>
+            </ul>
+        </div>
+    </div></script><script id=t:j_orderListSeachBlock type=text/html><div class="theme bg-color">
+        <h1><%=setLanguagePackage('订单列表')%></h1>
+    </div>
+    <div class="search bg-color <%=setLanguagePackageCss('search-block')%>">
+        <ul class="clearfloat">
+            <li>
+                <label><%=setLanguagePackage('招标类型')%>：</label>
+                <select class="company-type" id="bidType" name="bidType">
+                    <option value=","><%=setLanguagePackage('全部招标')%></option>
+                    <option value="1,1"><%=setLanguagePackage('石油焦')%>-<%=setLanguagePackage('供应招标')%></option>
+                    <option value="1,2"><%=setLanguagePackage('石油焦')%>-<%=setLanguagePackage('采购招标')%></option>
+                    <option value="2,1"><%=setLanguagePackage('煅后焦')%>-<%=setLanguagePackage('供应招标')%></option>
+                    <option value="2,2"><%=setLanguagePackage('煅后焦')%>-<%=setLanguagePackage('采购招标')%></option>
+                </select>
+            </li>
+            <li>
+                <label><%=setLanguagePackage('订单号')%>：</label>
+                <input class="orderNum" type="text" id="at_osb_on" name="at_osb_on"/>
+            </li>
+            <li>
+                <label><%=setLanguagePackage('招标名称')%>：</label>
+                <input class="tenderName" type="text" id="at_osb_tn" name="at_osb_tn"/>
+            </li>
+            <li>
+                <label><%=setLanguagePackage('公司名称')%>：</label>
+                <input class="companyName" type="text" id="at_osb_cn" name="at_osb_cn"/>
+            </li>
+        </ul>
+        <div class="btn-func">
+            <button class="find" type="button" id="at_osb_find" name="at_osb_find"><%=setLanguagePackage('查询')%></button>
+            <button class="reset" type="button" id="at_osb_reset" name="at_osb_reset"><%=setLanguagePackage('重置')%></button>
+        </div>
+    </div></script><script id=t:j_orderList type=text/html><%for(var i = 0; i < list.length; i++){%>
+    <div class="item" data-orderDeliveryId="<%=list[i].orderDeliveryId%>" data-orderId="<%=list[i].orderId%>"
+         data-successQuantity="<%=list[i].quantity%>">
+        <div class="order-top clearfloat  fts-14">
+            <div class="order-num"><%=setLanguagePackage('订单编号')%>：<%=list[i].orderNum%></div>
+            <div class="order-date"><%=setLanguagePackage('下单日期')%>：<%=dateYMDHMFormat(list[i].createTime)%></div>
+            <div class="order-status">
+                <%if(list[i].orderStatus == 1){%>
+                <%=setLanguagePackage('订单状态')%>：<%=setLanguagePackage('待付款')%>
+                <%}else if(list[i].orderStatus == 2){%>
+                <%=setLanguagePackage('订单状态')%>：<%=setLanguagePackage('待提货')%>
+                <%}else if(list[i].orderStatus == 3){%>
+                <%=setLanguagePackage('订单状态')%>：<%=setLanguagePackage('待验收')%>
+                <%}else if(list[i].orderStatus == 4){%>
+                <%=setLanguagePackage('订单状态')%>：<%=setLanguagePackage('已完成')%>
+                <%}else if(list[i].orderStatus == 5){%>
+                <%=setLanguagePackage('订单状态')%>：<%=setLanguagePackage('已取消')%>
+                <%}else if(list[i].orderStatus == 6 && list[i].totalDeliveryQuantity==0 && list[i].payType!=0){%>
+                <%=setLanguagePackage('订单状态')%>：<%=setLanguagePackage('未发货')%>
+                <%}else if(list[i].orderStatus == 6){%>
+                <%=setLanguagePackage('订单状态')%>：<%=setLanguagePackage('提货中')%>
+                <%}%>
+            </div>
+        </div>
+        <div class="order-detail clearfloat">
+            <div class="c-item o-photo">
+                <div class="photo">
+                    <img src="<%=list[i].tenderImages%>"
+                         alt=""/>
+                </div>
+            </div>
+            <div class="c-item title fts-14">
+                <h1><%=list[i].tenderTitle%></h1>
+            </div>
+            <div class="c-item status">
+                <%if(list[i].orderStatus == 1){%>
+                    <h1 class="fts-14 red"><%=setLanguagePackage('未付款')%></h1>
+                    <p><%=setLanguagePackage('剩余付款时间')%></p>
+                    <p class="clock" data-time="<%=list[i].payEndTime%>" data-oStatus="<%=list[i].orderStatus%>"></p>
+                <%}else if(list[i].orderStatus == 2){%>
+                    <h1 class="fts-14 red"><%=setLanguagePackage('未提货')%></h1>
+                    <p><%=setLanguagePackage('剩余提货时间')%></p>
+                    <p class="clock" data-time="<%=list[i].submitEndTime%>" data-oStatus="<%=list[i].orderStatus%>"></p>
+                <%}else if(list[i].orderStatus == 3){%>
+                    <!-- 只有线上支付才有验证截止时间限制 支付方式:0线下,1余额,2银行转账,3余额+银行转账-->
+                    <%if(list[i].payType!=0){%>
+                        <h1 class="fts-14 red"><%=setLanguagePackage('未验收')%></h1>
+                        <p class="clock" data-time="<%=list[i].orderFinishTime%>" data-oStatus="<%=list[i].orderStatus%>"></p>
+                    <!---certificateStatus 1:凭证审核中,2:凭证未通过,3:凭证已通过-->
+                    <%}else if(list[i].certificateStatus){%>
+                        <h1 class="fts-14"><%=setLanguagePackage('验收中')%></h1>
+                    <%}else{%>
+                        <h1 class="fts-14 red"><%=setLanguagePackage('未验收')%></h1>
+                    <%}%>
+                <!--已完成包含两种状态（已验收，未结算）-->
+                <%}else if(list[i].orderStatus == 4){%>
+                    <%if(list[i].finishPrice > list[i].payedPrice){%>
+                        <h1 class="fts-14 red"><%=setLanguagePackage('未结算')%></h1>
+                    <%}else{%>
+                        <%if(list[i].evaluate == 0){%>
+                            <h1 class="fts-14"><%=setLanguagePackage('已评价')%></h1>
+                        <%}else{%>
+                            <h1 class="fts-14"><%=setLanguagePackage('已验收')%></h1>
+                        <%}%>
+                    <%}%>
+                <%}else if(list[i].orderStatus == 5){%>
+                    <h1 class="fts-14"><%=setLanguagePackage('已取消')%></h1>
+                <%}else if(list[i].orderStatus == 6){%>
+                    <%if(list[i].totalDeliveryQuantity == 0){%>
+                        <h1 class="fts-14 red"><%=setLanguagePackage('未发货')%></h1>
+                    <%}else{%>
+                        <h1 class="fts-14"><%=setLanguagePackage('提货中')%></h1>
+                    <%}%>
+                    <!--线上支付才有倒计时-->
+                    <%if(list[i].payType!=0){%>
+                        <p><%=isTimeDelay(list[i].deliveryEndTime)%></p>
+                        <%if(isNotDelay(list[i].deliveryEndTime)){%>
+                            <p class="clock" data-time="<%=list[i].deliveryEndTime%>" data-oStatus="<%=list[i].orderStatus%>"></p>
+                        <%}%>
+                    <%}%>
+                <%}%>
+            </div>
+            <div class="c-item goods-con amount">
+                <p class="fts-14"><span class="fts-18"><%=list[i].totalDeliveryQuantity%><%=setLanguagePackage('吨')%></span></p>
+                <p class="color-9d text-i text-mb"><%=setLanguagePackage('提货总量')%></p>
+                <p class="fts-14 text-in"><span class="fts-14"><%=list[i].quantity%></span></p>
+                <p class="color-9d text-i"><%=setLanguagePackage('订单总量')%></p>
+            </div>
+            <div class="c-item goods-con cash">
+                <p class="fts-14">￥<span class="fts-18"><%=list[i].totalDeliveryPrice?list[i].totalDeliveryPrice:'0'%></span></p>
+                <p class="color-9d text-i text-mb"><%=setLanguagePackage('提货总额')%></p>
+                <p class="fts-14 text-in">￥<span class="fts-14"><%=list[i].sumPrice?list[i].sumPrice:'0'%></span></p>
+                <p class="color-9d text-i">
+                    <%=setLanguagePackage('订单总额')%>
+                <!--支付方式payType 0线下,1余额,2银行转账-->
+                <%if(list[i].payType==0){%>
+                    (<%=setLanguagePackage('线下转账')%>)
+                <%}else if(list[i].payType==1){%>
+                    (<%=setLanguagePackage('余额支付')%>)
+                <%}else if(list[i].payType==2){%>
+                    (<%=setLanguagePackage('网银支付')%>)
+                <%}%>
+                </p>
+            </div>
+            <div class="c-item func-btn" data-orderType="<%=list[i].orderType%>">
+                <!--orderType=2 买家-->
+                <%if(list[i].orderType == 2){%>
+                    <!-- 管理员才能支付 -->
+                    <%if(list[i].orderStatus == 1 && userData.role==2){%>
+                        <button class="submit" id="at_order_pay_<%=i%>" name="at_order_pay_<%=i%>"><%=setLanguagePackage('立即付款')%></button>
+                    <%}else if(list[i].orderStatus == 2){%>
+                        <button class="carry-goods" id="at_order_delivery_<%=i%>" name="at_order_delivery_<%=i%>"><%=setLanguagePackage('新建提货单')%></button>
+                    <%}else if(list[i].orderStatus == 3){%>
+                        <!-- 线上支付确认收货，线下支付上传凭证单 payType0线下,1余额,2银行转账,3余额+银行转账 -->
+                        <%if(list[i].payType!=0){%>
+                            <!--<button class="finish">确认收货</button>-->
+                        <!--certificateStatus 1:凭证审核中,2:凭证未通过,3:凭证已通过(线下支付才有)-->
+                        <%}else if(list[i].certificateStatus==1){%>
+                            <button class="checking" id="at_order_checking_<%=i%>" name="at_order_checking_<%=i%>"><%=setLanguagePackage('凭证审核中')%></button>
+                        <%}else if(list[i].certificateStatus==2){%>
+                            <button class="over" id="at_order_over_<%=i%>" name="at_order_over_<%=i%>"><%=setLanguagePackage('审核未通过')%></button>
+                        <%}else{%>
+                            <button class="ok" id="at_order_ok_<%=i%>" name="at_order_ok_<%=i%>"><%=setLanguagePackage('确认收货')%></button>
+                        <%}%>
+                    <%}else if(list[i].orderStatus == 6){%>
+                        <!-- 线上支付才有新建提货单 payType0线下,1余额,2银行转账,3余额+银行转账,且剩余提货了大于等于30  -->
+                        <%if(list[i].payType!=0 && (list[i].quantity - list[i].totalSubmitQuantity >= 30)){%>
+                            <button class="carry-goods" id="at_order_delivery_<%=i%>" name="at_order_delivery_<%=i%>"><%=setLanguagePackage('新建提货单')%></button>
+                        <%}%>
+                    <%}else if(list[i].orderStatus == 4){%>
+                        <%if(list[i].finishPrice > list[i].payedPrice && list[i].payType!=0){%>
+                            <button class="settlement-end" id="at_order_se_<%=i%>" name="at_order_se_<%=i%>"><%=setLanguagePackage('结算尾款')%></button>
+                        <%}else if(list[i].evaluate == 1){%>
+                            <button class="btn-evaluate" id="at_order_eva_<%=i%>" name="at_order_eva_<%=i%>"><%=setLanguagePackage('评价')%></button>
+                        <%}%>
+                    <%}%>
+                    <!-- 卖家 -->
+                <%}else if(list[i].orderType == 1){%>
+                    <%if(list[i].orderStatus == 6){%>
+                        <!--线上支付才有新建出库单，线下支付为 确认发货-->
+                        <%if(list[i].payType!=0 && list[i].orderDeliveryId != null){%>
+                            <button class="update" id="at_order_update_<%=i%>" name="at_order_update_<%=i%>"><%=setLanguagePackage('去发货')%></button>
+                        <!-- 待完成 -->
+                        <%}else if(list[i].payType==0){%>
+                            <button class="p_order_confirm" data-orderNum="<%=list[i].orderNum%>" id="at_order_update_<%=i%>" name="at_order_update_<%=i%>"><%=setLanguagePackage('去发货')%></button>
+                        <%}%>
+                    <%}else if(list[i].orderStatus == 3){%>
+                        <!--线下支付卖家可看见凭证审核状态-->
+                        <%if(list[i].payType==0){%>
+                            <!--certificateStatus 1:凭证审核中,2:凭证未通过-->
+                            <%if(list[i].certificateStatus==1){%>
+                                <button class="checking" id="at_order_checking_<%=i%>" name="at_order_checking_<%=i%>"><%=setLanguagePackage('凭证审核中')%></button>
+                            <%}else if(list[i].certificateStatus==2){%>
+                                <button class="over" id="at_order_over_<%=i%>" name="at_order_over_<%=i%>"><%=setLanguagePackage('审核未通过')%></button>
+                            <%}%>
+                        <%}%>
+                    <%}else if(list[i].orderStatus == 4){%>
+                        <%if(list[i].evaluate == 1){%>
+                            <button class="btn-evaluate" id="at_order_eva_<%=i%>" name="at_order_eva_<%=i%>"><%=setLanguagePackage('评价')%></button>
+                        <%}%>
+                    <%}%>
+                <%}%>
+                <%if(list[i].payType === 0 && (list[i].orderStatus === 6 || list[i].orderStatus === 3 ||
+                list[i].orderStatus === 4 || list[i].orderStatus === 5)){%>
+                    <a href="p_order_detail_offLine.html?orderId=<%=list[i].orderId%>" target="_blank" id="at_order_details_<%=i%>" name="at_order_details_<%=i%>"><%=setLanguagePackage('查看详情')%></a>
+                <%} else {%>
+                    <a href="p_order_detail.html?orderId=<%=list[i].orderId%>" target="_blank" id="at_order_details_<%=i%>" name="at_order_details_<%=i%>"><%=setLanguagePackage('查看详情')%></a>
+                <%}%>
+            </div>
+            <%var reputationClass;%>
+            <%if (list[i].reputationValue <= 0) {%>
+                <%reputationClass = 1;%>
+            <%} else if (list[i].reputationValue > 0 && list[i].reputationValue <= 150) {%>
+                <%reputationClass = 2;%>
+            <%} else if (list[i].reputationValue > 150 && list[i].reputationValue <= 300) {%>
+                <%reputationClass = 3;%>
+            <%} else if (list[i].reputationValue > 300) {%>
+                <%reputationClass = 4;%>
+            <%}%>
+            <div class="w-supplier" style="margin: 0 10px 10px 10px;">
+                <p>
+                    <b>
+                        <%if(list[i].type==1 ){%>
+                        <%=setLanguagePackage('供应商')%>
+                        <%}else{%>
+                        <%=setLanguagePackage('采购方')%>
+                        <%}%>
+                        ：<%=list[i].companyName%></b>
+                    <span class="s-credibility-<%=reputationClass%>"></span>
+                </p>
+                <div class="w-credibility">
+                    <h4><%=list[i].companyName%></h4>
+                    <h5><tt><%=returnZhengshu(list[i].star)%></tt><i><%=list[i].orderSuccessCount%><%=setLanguagePackage('单')%></i></h5>
+                    <dl>
+                        <dt class="w-credibility-<%=reputationClass%>"></dt>
+                        <dd><%=setLanguagePackage('信誉值')%>：<%=list[i].reputationValue%></dd>
+                    </dl>
+                    <%if (list[i].type == 1) {%>
+                    <%var userId = list[i].supplierId;%>
+                    <%} else if (list[i].type == 2) {%>
+                    <%var userId = list[i].buyerId;%>
+                    <%}%>
+                    <%if (list[i].followed != null) {%>
+                        <div class="focus_on <%=list[i].followed ? 'special' : ''%>" data-userid="<%=userId%>">
+                            <%if(list[i].followed){%>
+                            <%=setLanguagePackage('已关注')%>
+                            <%}else{%>
+                            <%=setLanguagePackage('关注')%>
+                            <%}%>
+                        </div>
+                        <%if (list[i].followed){%>
+                            <div class="focus_on_text"><%=setLanguagePackage('已接收该商家发布招标通知')%></div>
+                        <%}else{%>
+                            <div class="focus_on_text"><%=setLanguagePackage('关注，接收该商家发布招标通知')%></div>
+                        <%}%>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%}%></script><style type=text/css>.mod-menu .item:nth-child(1) h1 {
+        background: none !important;
+    }</style>

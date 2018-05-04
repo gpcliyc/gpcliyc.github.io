@@ -1,0 +1,34 @@
+[{
+    "zh-CN":
+    {
+        "我的关注":"我的关注",
+        "我的订阅":"我的订阅",
+        "关注长期合作的商家，可接收该商家发布招标的通知信息哦。":"关注长期合作的商家，可接收该商家发布招标的通知信息哦。",
+        "订阅您需要的产品，可接收符合您需求的招标发布短信通知哦。":"订阅您需要的产品，可接收符合您需求的招标发布短信通知哦。",
+        "单":"单",
+        "信誉值":"信誉值",
+        "已关注":"已关注",
+        "没有相关关注信息":"没有相关关注信息",
+        "取消关注":"取消关注",
+        "关注":"关注",
+        "关注的企业":"关注的企业",
+        "关注的指标":"关注的指标"
+
+
+    }
+},{
+    "en-US":{
+        "我的关注":"My Follow",
+        "我的订阅":"My Subscribe",
+        "关注长期合作的商家，可接收该商家发布招标的通知信息哦。":"Pay attention to the business of long-term cooperation and receive the notification information from the business.",
+        "单":"orders",
+        "信誉值":"Reputations",
+        "已关注":"followed",
+        "没有相关关注信息":"No relevant information",
+        "取消关注":"unfollow",
+        "关注":"follow",
+        "关注的企业":"follow company",
+        "关注的指标":"follow index"
+
+    }
+}]

@@ -1,0 +1,596 @@
+/*个人信息部分--资质认证*/
+.mod-body .mod-certification {
+    width: 830px;
+    min-height: 600px;
+}
+
+.mod-body .mod-certification .theme {
+    height: 36px;
+    line-height: 36px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.mod-certification .theme1 {
+    background: url('../images/main/s1.png') no-repeat center center/100% 100%;
+}
+
+.mod-certification .theme2 {
+    background: url('../images/main/s2.png') no-repeat center center/100% 100%;
+}
+
+.mod-certification .theme3 {
+    background: url('../images/main/s3.png') no-repeat center center/100% 100%;
+}
+
+.mod-certification .theme p {
+    float: left;
+    width: 33%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*资质认证*/
+.mod-certification {
+    position: relative;
+    width: 1080px;
+    margin: 0px auto 20px                    0;
+}
+.mod-certification .list_companyArea{
+    padding: 20px 20px 0 20px;
+    background-color: #ffffff;
+}
+.mod-certification .list_peopleInfo{
+    padding: 20px;
+    background-color: #ffffff;
+}
+.mod-certification-success {
+    position: relative;
+    margin: 0px auto 20px 0;
+    padding: 20px 20px 0 20px;
+    background-color: #ffffff;
+}
+
+.mod-certification .theme {
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.mod-certification .theme img {
+    width: 100%;
+    height: 100%;
+}
+
+.mod-certification .success-show {
+    background-color: #f5f5f5;
+    position: absolute;
+    width: 830px;
+    text-align: center;
+    margin-top: 20px;
+    color: #999;
+}
+
+.mod-certification .item {
+    margin-top: 30px;
+}
+
+.mod-certification .last-item {
+    margin-bottom: 30px;
+    padding: 20px 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+.mod-certification .item h1 {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 30px;
+}
+
+.mod-certification .item .detail {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.mod-certification .item .detail li {
+    margin-bottom: 10px;
+}
+
+.mod-certification .item .detail li label {
+    float: left;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.mod-certification .item .detail li > div {
+    position: relative;
+    float: left;
+    width: 580px;
+}
+
+.mod-certification.show .item .detail li > div {
+    position: relative;
+    float: left;
+    width: 442px;
+    line-height: 30px;
+}
+
+.company-type {
+    width: 250px;
+    padding: 4px 10px;
+    border: 1px solid #ececec;
+}
+
+.mod-certification .item input {
+    width: 400px;
+    padding: 5px 10px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ececec;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.card-hide {
+    display: none;
+}
+
+.judge {
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/main/is-exit.png') no-repeat center center;
+}
+
+.join {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #5b8ed2;
+    cursor: pointer;
+}
+
+.join:hover {
+    opacity: 0.8;
+}
+
+.loading {
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/main/loading.gif') no-repeat center center/100%;
+}
+
+.judge.hide, .join.hide, .loading.hide {
+    display: none;
+}
+
+.join-yes {
+    display: inline-block;
+    font-size: 14px;
+    color: #5b8ed2;
+}
+
+.judge-no {
+    display: inline-block;
+    font-size: 14px;
+    color: #f52424;
+}
+
+.judge-no.hide, .join-yes.hide {
+    display: none;
+}
+
+.mod-certification .item input.red {
+    border: 1px solid #f52424;
+}
+
+.mod-certification .item input:focus {
+    border: 1px solid #5b8ed2;
+}
+
+.mod-certification .item .detail select {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ececec;
+}
+
+.mod-certification .item .detail select.company-type {
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ececec;
+}
+
+.mod-certification .item .detail select.red {
+    border: 1px solid #f52424;
+}
+
+.mod-certification .item .detail p, .mod-certification .item .detail .record {
+    line-height: 30px;
+}
+
+.mod-certification .item .detail p.special {
+    line-height: 1.2;
+    margin: 6px 0;
+}
+
+.mod-certification .item .detail .png-box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ececec;
+    position: relative;
+    background-color: #FAFAFA;
+}
+
+.mod-certification .item .detail .png-box .img-wrap {
+    position: relative;
+    width: 198px;
+    height: 198px;
+    overflow: hidden;
+}
+
+.mod-certification .item .detail .png-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.mod-certification .item .detail .png-box img.width {
+    /*width: 100%;*/
+    /*height: auto;*/
+    height: 200px;
+    width: 200px;
+}
+
+.mod-certification .item .detail .png-box img.height {
+    height: 100%;
+    width: 198px;
+}
+
+.mod-certification .item .detail .png-box .up-input,.mod-certification .item .detail .png-box .up-input{
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.mod-certification .item .detail .upload {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #5b8ed2;
+    border: 0;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: unset;
+}
+.submit-certify {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.submit-company-certify{
+    display: block;
+    width: 100%;
+    height: 40px;
+    /*line-height: 40px;*/
+    border: 0;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.submit-people-certify{
+    display: block;
+    width: 100%;
+    height: 40px;
+    /*line-height: 40px;*/
+    border: 0;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-top:30px;
+}
+.error {
+    color: #f52424;
+    /*margin-left: 14px;*/
+    display: inline-block;
+    line-height: 30px;
+}
+.last-item .error{
+    margin-left: 10px;
+}
+.fix-error1, .fix-error2, .fix-error3, .fix-error4,.fix-error5,.fix-error6 {
+    position: absolute;
+    left: 200px;
+    top: 10px;
+}
+
+/*等待认证*/
+.mod-certification .go-hallArea .tip {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mod-certification .go-hallArea .tip img {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mod-certification .go-hallArea .tip p {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+.mod-certification.wait .item a {
+    display: block;
+    color: #5b8ed2;
+    text-align: center;
+    font-size: 14px;
+}
+
+/*认证成功*/
+.apply-success {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: url('../images/main/company_success.png') no-repeat center/100%;
+}
+/*公司封停中*/
+.apply-company-stop {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: url('../images/main/company_stop.png') no-repeat center/100%;
+}
+/*用户被禁用*/
+.user_stop {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: url('../images/main/user_stop.png') no-repeat center/100%;
+}
+
+
+.deny-tip {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #f52424;
+}
+
+.mod-certification.wait .item a.btn{
+    display: block;
+    width: 135px;
+    height: 40px;
+    line-height: 40px;
+    border: 0;
+    color: #ffffff;
+    text-align: center;
+    margin: 29px auto;
+    font-size: 14px;
+    background-color: #5b8ed2;
+    border-radius: 3px;
+}
+
+.authFloatRight{
+	float: right;
+}
+.mod-certification-commitArea{
+    position: relative;
+    margin: 0px auto 30px 0;
+    padding: 20px 20px 0 20px;
+    background-color: #ffffff;
+}
+.go-hall{
+    margin-right: 20px;
+    text-align: right;
+}
+.go-hall a{
+    color: #5b8ed2;
+}
+.certify-edit{
+    display: block;
+    width: 100%;
+    height: 40px;
+    /*line-height: 40px;*/
+    border: 0;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.go-hallArea{
+    background-color: #ffffff;
+    margin: 0 0 20px 0;
+    padding: 20px 0;
+}
+.company-error{
+    color: #f52424;
+    margin: 0 9px 0 -6px;
+}
+.mod-certification #city  select,.mod-certification #city1 select{
+    margin-right: 10px;
+    border-radius: unset;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right:34px;
+    padding-left: 10px;
+    /*将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background:none;
+    background: url("../images/main/select_triangle.png") no-repeat scroll 180px center transparent;
+
+}
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+.mod-certification .item  select::-ms-expand{
+    background: #0054a7;
+    display: none;
+}
+.mod-certification .detail .company-type{
+    margin-right: 10px;
+    border-radius: unset;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right:34px;
+    padding-left: 10px;
+    /*将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background:none;
+    background: url("../images/main/select_triangle.png") no-repeat scroll 380px center transparent;
+    padding-top: 0;
+}
+.mod-certification .detail #bank_list{
+    background: url(../images/main/select_triangle.png) 380px center no-repeat scroll transparent;
+}
+.mod-certification #city  select[disabled="disabled"],.mod-certification #city1 select[disabled="disabled"]{
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right:34px;
+    padding-left: 10px;
+    /*将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background:none;
+    background: url("../images/main/select_triangle_gray.png") no-repeat scroll 180px center transparent;
+}
+
+
+/*国际区号插件覆盖*/
+
+.mod-certification .item .detail li.country > div {
+    position: relative;
+    float: left;
+    width: auto;
+}
+.mod-certification .item .detail .flag-container .country-list{
+    width: 400px;
+}
+/*图片样式*/
+.img-wrap .file-item div.pdf-text{
+    height: 130px;
+    line-height: 120px;
+    text-align: center;
+    font-size: 54px;
+    color: #5b8ed2;
+}
+.just-show-content .img-wrap .file-item div.pdf-text{
+    height: 155px;
+    line-height: 135px;
+    text-align: center;
+    font-size: 54px;
+    color: #5b8ed2;
+}
+.img-wrap .file-item div.info{
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 30px;
+    width: 190px;
+    padding: 0 5px;
+}
+
+.img-wrap .file-item img,.img-wrap img{
+    width: 200px;
+    height:200px;
+}
+.img-wrap .input-img-tips{
+    text-align: center;
+}
+.img-wrap .input-img-tips .input-img-tips-1{
+    padding: 25px 0;
+}
+
+.webuploader-pick{
+    width: 198px;
+    height: 40px;
+    background: #5b8ed2;
+    border-radius: unset;
+    padding: 0;
+}
+.webuploader-container:hover{
+    opacity: 0.8;
+    background: #5b8ed2;
+}
+.webuploader-container label:hover{
+    opacity: 0.8;
+    background: #5b8ed2;
+}
+.webuploader-pick-hover {
+    opacity: 0.8;
+    background: #5b8ed2;
+}
+.png-box button.upload:hover{
+    opacity: 0.8!important;
+    background: #5b8ed2;
+}
+.webuploader-container div{
+    width: 200px!important;
+}
+button:hover{
+    background: #5b8ed2;
+    opacity: 0.8;
+}
+.detail .png-box label:hover{
+    background: #5b8ed2;
+    opacity: 0.8;
+}
+.show-loading-content{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 100%;
+    z-index: 998;
+    background: #000;
+    opacity: 0.5;
+}
+.show-loading{
+    top:40%;
+    margin:0;
+}
+.show-loading-block{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 100%;
+    z-index: 998;
+}

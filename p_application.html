@@ -1,0 +1,198 @@
+<!DOCTYPE html><html><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><title></title><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=keywords content="焦易网,焦易, jiaoyiwang,jiaoyi,石油焦,煅后焦,石油焦厂家,石油焦价格,煅后焦价格"><meta name=description content="焦易网，是首家石油焦全产业链电商交易平台，为炭素行业上下游企业提供信息流、商流、资金流和物流配送的一站式全产业链服务，以至优化全球石油焦资源流转配置
+效率，实现石油焦供求两端的经济利益最大化。"><link rel="shortcut icon" href=./images/common/logo_black.png type="image/x-icon"><meta http-equiv=Pragma content="no-cache"><meta http-equiv=Cache-Control content="no-store,must-revalidate"><meta http-equiv=Expires content="0"><link rel=stylesheet href=styles/reset.css><link rel=stylesheet href=styles/common.css><link rel=stylesheet href=styles/base.css><link rel=stylesheet href=styles/p_certification.css><link rel=stylesheet href=styles/p_bid_hall.css><link rel=stylesheet href=styles/p_application.css><link rel=stylesheet href=./plugin/intlTel/intlTelInput.css><body><div class=index-head-wrap><div id=layout_header></div></div><div class="mod-center clearfloat"><div id=j_modMenu class="mod-menu mod-menu-height"></div><div class="mod-body bg-color"><div id=j_edit class="mod-certification mod-certification-success edit hide"></div><div class="mod-certification wait hide"><div class="theme theme2"><p class=btn-edit id=at_application_theme2_btn-edit name=at_application_theme2_btn-edit>填写认证</p><p class=btn-wait id=at_application_theme2_btn-wait name=at_application_theme2_btn-wait>等待审核</p><p id=at_application_theme2_success name=at_application_theme2_btn-success>认证成功</p></div><div class=item><div class=tip><img src=./images/main/wait-blue.png alt=""><p>认证资料已经提交，5个工作日将给出审核结果，请耐心等待管理员审核</p></div><a href=p_bid_hall.html id=at_application_theme2_p_bid_hall name=at_application_theme2_p_bid_hall>随便逛逛</a> <a class="btn btn-edit" href=javascript:void(0) id=at_application_theme2_btn-reedit name=at_application_theme2_btn-reedit>重新编辑</a></div></div><div id=j_show class="mod-certification show hide mod-certification-success"></div></div></div><div id=layout_footer class=mod-footer></div><script src=./plugin/seajs/2.2.3/sea.js type=text/javascript></script><script src=./js/config.js type=text/javascript></script><script type=text/javascript>seajs.use("./js/p_application.js");</script><script id=t:j_edit type=text/html><div class="theme theme1">
+        <p class="btn-edit" id="at_application_theme1_btn-edit" name="at_application_theme1_btn-edit">填写认证</p>
+
+        <p class="btn-wait" id="at_application_theme1_btn-wait" name="at_application_theme1_btn-wait">等待审核</p>
+
+        <p id="at_application_theme1_btn-success" name="at_application_theme1_btn-success">申请成功</p>
+    </div>
+    <div class="item">
+        <h1>公司信息 <span class="color-9d fts-12">（均为必填项）</span></h1>
+
+        <div class="detail">
+            <ul>
+                <li class="clearfloat">
+                    <label>公司名称：</label>
+
+                    <div>
+                        <input class="compantName need" class="w-250 pbt-20" type="text" value="<%=list.companyName?list.companyName:''%>" id="at_application_theme1_compantName" name="at_application_theme1_compantName"/>
+                        <span class="error"></span>
+                        <div class="judge-no hide" title="">*该公司未被认证,不可以加入</div>
+                        <i class="loading hide"></i>
+
+                        <div href="javascript:;" class="join-yes hide">公司已认证，可以申请加入</div>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>所在部门：</label>
+
+                    <div>
+                        <input class="department need" type="text" value="<%=list.department?list.department:''%>" id="at_application_theme1_department" name="at_application_theme1_department" maxlength="20"/>
+                        <span class="error"></span>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>岗位信息：</label>
+
+                    <div>
+                        <input class="position need" type="text" value="<%=list.position?list.position:''%>" id="at_application_theme1_position" name="at_application_theme1_position" maxlength="20"/>
+                        <span class="error"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <h1>联系人信息 <span class="color-9d fts-12">（均为必填项）</span></h1>
+
+        <div class="detail">
+            <ul>
+                <li class="clearfloat">
+                    <label>联系人姓名：</label>
+
+                    <div>
+                        <input class="nickname need w-250 pbt-20" type="text" value="<%=list.nickname?list.nickname:''%>" id="at_application_theme1_nickname" name="at_application_theme1_nickname"/>
+                        <span class="error"></span>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>身份证号：</label>
+
+                    <div>
+                        <input class="connectIdcard need" type="text" value="<%=list.idcard?list.idcard:''%>" id="at_application_theme1_connectIdcard" name="at_application_theme1_connectIdcard"/>
+                        <span class="error"></span>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>手机号：</label>
+
+                    <div>
+                        <input class="connectPhone need" type="text" value="<%=list.connectPhone?list.connectPhone:''%>" id="at_application_theme1_connectPhone" name="at_application_theme1_connectPhone"/>
+                        <span class="error"></span>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>邮箱：</label>
+
+                    <div>
+                        <input class="connectEmail need" type="text" value="<%=list.email?list.email:''%>" id="at_application_theme1_connectEmail" name="at_application_theme1_connectEmail"/>
+                        <span class="error"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <h1>上传资料 <span class="color-9d fts-12">（均为必填项）</span></h1>
+
+        <div class="detail">
+            <ul>
+                <li class="clearfloat">
+                    <label>身份证明：</label>
+
+                    <div>
+                        <div class="png-box png-box1">
+                            <div class="img-wrap"><img src="<%=list.idcardImage?list.idcardImage:''%>" alt=""/></div>
+                            <button class="upload upload1">添加图片</button>
+                            <input id="img_input" class="up-input up-input4" type="file" accept="image/*" name="at_application_theme1_img_input"/>
+                        </div>
+                        <span class="fix-error1 error"></span>
+
+                        <p class="color-9d">不能超过 10M ，只支持PNG、JPG、JPEG格式</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="submit-certify btn-primary" type="button" id="at_application_theme1_submit-certify" name="at_application_theme1_submit-certify">提交认证资料</button></script><script id=t:j_show type=text/html><div class="<%=classStr%>"></div>
+    <div class="item">
+        <h1>公司信息 <span class="color-9d fts-12">（均为必填项）</span></h1>
+
+        <div class="detail">
+            <ul>
+                <li class="clearfloat">
+                    <label>公司名称：</label>
+
+                    <div>
+                        <p><%=list.companyName%></p>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>所在部门：</label>
+
+                    <div>
+                        <p><%=list.department%></p>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>岗位信息：</label>
+
+                    <div>
+                        <p><%=list.position%></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <h1>联系人信息 <span class="color-9d fts-12">（均为必填项）</span></h1>
+
+        <div class="detail">
+            <ul>
+                <li class="clearfloat">
+                    <label>联系人姓名：</label>
+
+                    <div>
+                        <p><%=list.nickname%></p>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>身份证号：</label>
+
+                    <div>
+                        <p><%=list.idcard%></p>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>手机号：</label>
+
+                    <div>
+                        <p>
+                            <%if(list.connectPhone){%>
+                            <%=list.connectPhoneAreaCode ?list.connectPhoneAreaCode:'+86'%><span> </span><%=list.connectPhone%>
+                            <%}%>
+                        </p>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <label>邮箱：</label>
+
+                    <div>
+                        <p><%=list.email%></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <h1>上传资料 <span class="color-9d fts-12">（均为必填项）</span></h1>
+
+        <div class="detail">
+            <ul>
+                <li class="clearfloat">
+                    <label>身份证明：</label>
+
+                    <div>
+                        <div class="png-box png-box4">
+                            <div class="img-wrap"><img src="<%=list.idcardImage%>" alt=""/></div>
+                        </div>
+                    </div>
+                </li>
+                <%if(list.authTime){%>
+				<li class="authFloatRight">
+				认证时间：<%=dateFormat(list.authTime)%>
+	            </li>
+                <%}%>
+            </ul>
+        </div>
+    </div></script>

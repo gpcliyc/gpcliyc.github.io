@@ -1,0 +1,352 @@
+a {
+    color: #454545;
+}
+
+a:active {
+    color: #454545;
+}
+
+.bid-detail {
+    width: 1080px;
+    margin: 90px auto 0;
+    min-height: -moz-calc(100% - 286px);
+    min-height: -webkit-calc(100% - 286px);
+    min-height: calc(100% - 286px);
+}
+
+.bid-detail .title {
+    height: 61px;
+    margin: 0 0 20px 0;
+    padding: 20px 33px;
+    background-color: #fff;
+}
+
+.bid-detail .title a:hover {
+    color: #5b8ed2;
+}
+
+/*竞价中*/
+.bid-detail .company {
+    position: relative;
+    background-color: #fff;
+    padding: 30px 33px;
+    margin-bottom: 20px;
+}
+
+.company .goods-img {
+    position: relative;
+    float: left;
+    margin-right: 33px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.company .goods-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.company .goods-img img.height {
+    height: 100%;
+    width: auto;
+}
+
+.company .goods-img img.width {
+    width: 100%;
+    height: auto;
+}
+
+.company .detail {
+    width: 700px;
+}
+
+.company .detail p label {
+    float: left;
+    width: 74px;
+}
+
+.company .detail p span {
+    float: left;
+    width: 500px;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 58px;
+}
+
+.company .detail > h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.company .detail > ul li {
+    width: 635px;
+    color: #9d9d9d;
+    /* float: left; */
+    font-size: 14px;
+    margin: 0 10px 13px 0;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+}
+
+.company .detail > ul li span.m-title {
+    margin-right: 13px;
+}
+
+.company .detail > ul li .m-content{
+    width: 480px;
+    display: inline-block;
+    vertical-align: bottom;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*cursor: pointer;*/
+}
+
+/*.company .detail > ul li em {*/
+    /*font-size: 24px;*/
+    /*color: #5b8ed2;*/
+/*}*/
+
+.company .detail > ul li label {
+    width: 74px;
+    display: inline-block;
+}
+
+.company .detail > ul li.price {
+    margin-top: -5px;
+}
+
+.company .detail > p {
+    color: #9d9d9d;
+    font-size: 14px;
+    width: 750px;
+    margin-bottom: 15px;
+}
+
+/*含量小框*/
+.company .detail .li {
+    position: relative;
+}
+.company .detail .content-menu {
+    position: absolute;
+    bottom: 17px;
+    left: 230px;
+    padding: 20px;
+    width: 250px;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 0px 5px #E4E4E4;
+    background-color: #fff;
+    border-radius: 3px;
+    white-space: normal;
+}
+
+.company .detail .hide{
+    display: none;
+}
+
+.company .bidding {
+    position: absolute;
+    right: 25px;
+    top: 32px;
+    text-align: right;
+    width: 100px;
+}
+
+.company .bidding p {
+    font-size: 16px;
+    /*color: #9d9d9d;*/
+    margin-left: 25px;
+}
+
+.company .bidding > img {
+    margin: 10px  0 10px 70px;
+    display: block;
+}
+
+.company .bidding span {
+    font-size: 14px;
+    color: #ff7522;
+}
+
+.company .fuc-btn {
+    position: absolute;
+    right: 25px;
+    top: 147px;
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    background-color: #5b8ed2;
+    cursor: pointer;
+}
+
+.company .btn-blue {
+    background-color: #5b8ed2;
+}
+
+.company .btn-green {
+    background-color: #4CB050;
+}
+
+.company .enter-bidding-rule {
+    position: absolute;
+    right: 25px;
+    top: 207px;
+    font-size: 14px;
+    color: #5b8ed2;
+    text-decoration:underline;
+}
+
+.company .bid-bottom {
+    clear: both;
+    font-size: 14px;
+    color: #9d9d9d;
+    padding-top: 15px;
+}
+
+.company .bid-bottom span{
+    margin-right: 60px;
+}
+
+.company .bid-bottom label{
+    clear: both;
+    font-size: 24px;
+    color: #5b8ed2;
+}
+
+
+/*竞价列表*/
+.bid-detail .list {
+    /*display: none;*/
+    background-color: #fff;
+    padding: 23px 33px 30px;
+}
+
+.bid-detail .list .head {
+    margin-bottom: 20px;
+}
+
+.bid-detail .list .head p {
+    color: #9d9d9d;
+}
+
+.bid-detail .list .head p em {
+    color: #5b8ed2;
+}
+
+.bid-detail .list .head p span:first-child {
+    margin-right: 30px;
+}
+
+.bid-detail .list table {
+    width: 100%;
+    font-size: 14px;
+}
+
+.bid-detail .list table thead {
+    background-color: #efefef;
+}
+
+.bid-detail .list table tbody {
+    color: #9d9d9d;
+}
+
+.bid-detail .list table thead tr,
+.bid-detail .list table tbody tr {
+    border: solid 1px #e1e1e1;
+}
+/*IE,firefox下行会掉下去bug*/
+/*.bid-detail .list table thead tr th,*/
+/*.bid-detail .list table tbody tr td {*/
+    /*text-align: center;*/
+    /*padding: 18px 0;*/
+    /*display: inline-block;*/
+/*}*/
+
+.bid-detail .list table tbody tr td.success {
+    color: #5b8ed2;
+}
+
+.bid-detail .list table thead tr th {
+    width: 14.2%;
+}
+table td {
+    text-align: center;
+     width: 14.2%;
+}
+
+
+/*状态图标*/
+
+.bid-detail .goods-img .sign {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+}
+.bid-detail .goods-img .sign-bidding {
+    background: url('../images/bid/bidding.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.bid-detail .goods-img .sign-finished {
+    background: url('../images/bid/finished.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.bid-detail .goods-img .sign-cancle {
+    background: url('../images/bid/cancle.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+/*竞价详情label固定宽度*/
+.row label{
+    width: 88px;
+    float: left;
+}
+.row span{
+    max-width: 600px;
+    float: left;
+    word-break: break-all;
+}
+.nav > li > a{
+    padding: 5px 0;
+    margin-right: 27px;
+}
+.company .bid-detail-seller-en > ul li label{
+    width: 130px;
+}
+.company .fuc-btn-seller-en{
+    width: 130px;
+}
+.coke_name{
+    height: 20px;
+    padding: 0px 10px 1px 10px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+    border:1px solid rgba(71, 186, 254, 1);
+}
+
+
+.review_report{
+    color: blue;
+    cursor: pointer;
+}
+span.no_content{
+    color:black ;
+}

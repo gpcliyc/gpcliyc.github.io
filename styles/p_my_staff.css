@@ -1,0 +1,68 @@
+.detail_content{
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+.detail_title{
+    line-height: 30px;
+}
+/*员工列表thead*/
+.order .list table thead tr th, .order .list table tbody tr td{
+    padding:10px 0;
+}
+.order .list table thead tr th, .order .list table tbody tr td{
+    width: auto;
+    /*width:12.5%;*/
+}
+.theme button.transfer-limit{
+    padding: 10px 10px;
+    height: 35px;
+    background-color: #5b8ed2;
+    color: #fff;
+    margin-top: 13px;
+    line-height: 15px;
+}
+.role_manager{
+    font-size: 12px;
+    color: #5b8de2;
+    border: 1px solid #5b8de2;
+    padding: 3px;
+}
+.role_common{
+    font-size: 12px;
+    color: #52cf86;
+    border:1px solid #52cf86;
+    padding:3px;
+}
+.bg-grey{
+    color: #999;
+    font-size: 12px;
+}
+/*
+*转让权限弹出框
+ */
+.trans_Area{
+    margin-left: 20px;
+    padding-top: 35px;
+}
+.trans_title{
+    font-size: 16px;
+}
+.trans_Area select{
+    width: 300px;
+    height: 30px;
+}
+.staff-opt p.trans_detail{
+    font-size: 14px;
+    margin-top: 25px;
+    color: #999;
+    text-align: left;
+}
+.transfer_commit{
+    padding-top: 80px;
+    text-align: center;
+    font-size: 14px;
+}
+.opt-list-wrap{
+    right: 0%;
+}

@@ -1,0 +1,325 @@
+/*账户资金*/
+.coupons{
+    min-height: 605px;
+}
+.coupons_txt{
+    color: #373737;
+    line-height: 60px;
+    font-size: 14px;
+}
+.coupons-list{
+    width: 800px;
+    overflow: hidden;
+}
+.coupons dl{
+    width: 238px;
+    border: 1px solid #f1f1f1;
+    float: left;
+    margin-right: 28px;
+    margin-bottom: 28px;
+    position: relative;
+    height: 340px;
+}
+.coupons dl dt{
+    background: url(../images/common/bg_02.png) no-repeat;
+    height: 151px;
+    text-align: center;
+}
+.coupons dl.fifteen dt{
+    background: url(../images/common/bg_03.png) no-repeat;
+}
+.coupons dl.twenty dt{
+    background: url(../images/common/bg_04.png) no-repeat;
+}
+.coupons dl.overdue dt{
+    background: url(../images/common/bg_05.png) no-repeat;
+}
+.coupons dl dt h4{
+    color: #fff;
+    font-size: 18px;
+    padding-top: 25px;
+}
+.coupons dl dt p{
+    font-size: 13px;
+    color: #fffffd;
+}
+.coupons dl dt h5{
+    font-size: 12px;
+    color: #fffffd;
+    margin-top: 22px;
+}
+.coupons dl dt h4 span{
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.coupons dl dd{
+    margin: 0 12px;
+}
+.coupons dl dd h4{
+    padding-top: 20px;
+}
+.coupons dl dd h5{
+    padding-top: 12px;
+}
+.coupons dl dd i{
+    float: left;
+    font-style: normal;
+    font-size: 13px;
+    color: #373737;
+    padding-right: 5px;
+}
+.coupons dl dd span{
+    float: left;
+    width: 155px;
+    font-size: 13px;
+    color: #b6b6b6;
+}
+.coupons dl dd h6{
+    margin-top: 18px;
+    text-align: center;
+}
+.coupons dl dd h6 a{
+    width: 118px;
+    height: 34px;
+    border: 1px solid #5b8dd2;
+    font-size: 14px;
+    color: #5c8ed3;
+    line-height: 34px;
+    text-align: center;
+    display: inline-block;
+}
+.coupons dl.fifteen dd h6 a{
+    border: 1px solid #5bc4da;
+    color: #5bc4da;
+}
+.coupons dl.twenty dd h6 a{
+    border: 1px solid #ed7372;
+    color: #ed7372;
+}
+.coupons dl.overdue dd h6{
+    background: url(../images/common/icon_overdue.png) no-repeat;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: -18px;
+    left: 0;
+}
+.coupons dl.overdue dd h6 a{
+    display: none;
+}
+.no-coupons{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 150px;
+}
+.nav-title {
+    height: 61px;
+    margin: 0 0 20px 0;
+    padding: 20px 33px;
+    background-color: #fff;
+}
+
+.nav-title a {
+    color: #363636;
+}
+
+.balance {
+    background: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+.balance .balance-left,.balance .balance-right {
+    padding: 80px 0;
+    float: left;
+    width: 50%;
+}
+
+.balance .balance-left {
+    border-right: 1px solid #ececec;
+}
+
+.balance h3 {
+    font-size: 16px;
+    padding: 20px 0 10px;
+    font-weight: bold;
+}
+
+.balance .cash span {
+    font-size: 16px;
+}
+
+.balance .userable-balance {
+    padding: 10px 0;
+    color: #8d8d8d;
+}
+
+.balance .func-btn {
+    margin: 34px auto 0;
+    width: 110px;
+}
+
+.balance .widthdraw-btn, .balance .detail-btn, .balance .recharge-btn {
+    display: block;
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.balance .recharge-btn{
+    background-color: #5b8ed2;
+    color: #ffffff;
+    border: 0;
+}
+
+.balance .widthdraw-btn, .balance .detail-btn{
+    background-color: #ffffff;
+    color: #5b8ed2;
+    border: 1px solid #5b8ed2;
+}
+
+.balance .detail-btn{
+    margin: 0 auto;
+}
+
+.balance .btn:hover {
+    opacity: 0.8;
+}
+
+/*余额明细*/
+.balance-detail {
+    background: #ffffff;
+    padding: 0 20px 20px;
+}
+
+.balance-detail h3 {
+    font-size: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ececec;
+}
+
+.balance-detail .select-type {
+    font-size: 13px;
+    padding: 20px 0 0;
+}
+
+.balance-detail .select-type label {
+    display: block;
+    float: left;
+}
+
+.balance-detail .select-type .option {
+    display: block;
+    float: left;
+}
+
+.balance-detail .select-type .option li {
+    float: left;
+    width: 76px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.balance-detail .select-type .option li i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    background: url('../images/account/option.png') center center /100% 100%;
+}
+
+.balance-detail .select-type .option li.checked i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    background: url('../images/account/optioned.png') center center /100% 100%;
+}
+
+.balance-detail .select-type .option li span, .balance-detail .select-type .option li i {
+    vertical-align: middle;
+}
+
+.balance-detail .trade-table, .balance-detail .balance-table {
+    margin-top: 30px;
+    border-top: 1px solid #ececec;
+}
+
+.balance-detail .balance-table table th, .balance-detail .balance-table table td {
+    padding: 10px 0;
+    text-align: center;
+    width: 158px;
+    word-break: break-all;
+    overflow: auto;
+}
+
+.balance-detail .trade-table table th, .balance-detail .trade-table table td {
+    padding: 10px 0;
+    text-align: center;
+    width: 128px;
+    max-width: 128px;
+    word-break: break-all;
+    overflow: auto;
+}
+
+.balance-detail table tbody {
+    color: #8d8d8d;
+}
+
+
+
+.balance-detail table td.overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*下拉框*/
+.m-select{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ececec;
+    margin: -7px 0 0 10px;
+}
+
+
+/*.coupons dl.coupons-past-1 dt{*/
+    /*background: #adadad;*/
+/*}*/
+
+/*.coupons-past-3 .coupons-status-3{*/
+    /*position: relative;*/
+    /*left: -30px;*/
+    /*top: -285px;*/
+    /*width:107px;*/
+    /*height:53px;*/
+    /*-webkit-transform:rotate(315deg);*/
+    /*-moz-transform:rotate(315deg);*/
+    /*-ms-transform:rotate(315deg);*/
+    /*transform:rotate(315deg);*/
+/*}*/
+/*.coupons-past-3 .coupons-status-3 .img-past{*/
+    /*position: absolute;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    /*width: 107px;*/
+    /*height: 53px;*/
+    /*background: url(../images/common/coupons-past.png) no-repeat;*/
+
+/*}*/
+/*.coupons-past-3 .coupons-past-text{*/
+    /*position: relative;*/
+    /*left: 12px;*/
+    /*top: -322px;*/
+    /*width: 50px;*/
+    /*height: 50px*/
+/*}*/

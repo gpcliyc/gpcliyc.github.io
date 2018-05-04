@@ -1,0 +1,291 @@
+.apply_main .title{
+    margin: 20px 0;
+    padding: 20px 33px;
+    font-size: 16px;
+    background-color: #fff;
+}
+.apply_main .title a{
+    color: #454545;
+}
+.apply_main .title a:hover{
+    color: #5b8ed2;
+}
+.apply_main .p_order_detail{
+    cursor: pointer;
+}
+.apply_main .p_order_detail:hover{
+    color: #5b8ed2;
+}
+.apply_main .apply_detail{
+    margin: 20px 0;
+    padding: 20px 33px;
+    background-color: #fff;
+}
+.apply_detail .apply_detail_title{
+    font-size: 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #efefef;
+}
+.apply_detail .apply_flow{
+    padding: 15px 0;
+    width:100%;
+}
+/*
+**timeLine 样式
+ */
+/*
+**label宽度以timeline为4个为例，具体情况可以添加内嵌宽度
+ */
+.time_line .text label{
+    font-size: 16px;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+}
+.time_line .line span{
+    float: left;
+    display: inline-block;
+    width: 25px;
+    border-radius: 100%;
+    height: 25px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 700;
+}
+.time_line .line span.active{
+    background-color: #5b8ed2;
+}
+.time_line .line {
+    margin: 12px 0 10px 106px;
+}
+.time_line .line span.active {
+    background-color: #5b8ed2;
+}
+.time_line .line span.cancle {
+    background-color: #363636;
+}
+.time_line .line span.no-active {
+    background-color: #dedede;
+}
+.time_line .line span.current {
+    background-color: #ffffff;
+    border: 2px solid #5b8ed2;
+    color: #5b8ed2;
+}
+.time_line .line i {
+    float: left;
+    display: inline-block;
+    width: 221px;
+    height: 5px;
+    background-color: #5b8ed2;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+.time_line .line i.active {
+    background-color: #5b8ed2;
+}
+.time_line .line i.cancle {
+    background-color: #363636;
+}
+.time_line .line i.no-active {
+    background-color: #dedede;
+}
+.time_line .text label.no-active{
+    color: #999;
+}
+/*
+**timeLine 样式 结束
+ */
+/*
+*提货申请中间部分<!--开始-->
+ */
+.apply_submit_area{
+    border-top: solid 1px #efefef;
+}
+.apply_content{
+    margin: 15px 0 15px 40px;
+    font-size: 14px;
+}
+.apply_content .title-info{
+    margin: 20px 0;
+}
+.apply_content .title-info .red{
+    color: #f52424;
+}
+.apply_content .title-info p:first-child{
+    margin-right: 20px;
+}
+.apply_content ul li{
+    margin-bottom: 10px;
+}
+.apply_content ul li label{
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.apply_content ul input{
+    width: 200px;
+    padding: 4px 10px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ececec;
+    vertical-align: middle;
+}
+.apply_content ul input.red{
+    border: 1px solid #f52424;
+}
+.apply_content ul textarea{
+    border: 1px solid #ececec;
+    height: 100px;
+    padding: 10px;
+    resize: none;
+}
+.apply_content .btnAddCar{
+    border: 0;
+    color: #fff;
+    padding: 0px 10px;
+    min-width: 78px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #5b8ed2;
+    margin-left: 15px;
+}
+.apply_content .radio-options{
+    line-height: 30px;
+    min-width: 200px;
+    width: 84%;
+}
+.apply_content .delivery_cars_area{
+    margin-left: 110px;
+}
+.apply_content .radio-options span {
+    font-size: 14px;
+    color: #363636;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+}
+.apply_content .radio-options span i{
+    display: inline-block;
+    background: url(../images/main/square-defaultd.png) no-repeat left center;
+    background-size: 12px 12px;
+    width: 12px;
+    height: 14px;
+    vertical-align: -2px;
+    margin-right: 5px;
+    -webkit-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
+    transition: all linear 0.1s;
+}
+.apply_content .radio-options span i.checked {
+    background: url(../images/main/square-checked.png) no-repeat left center;
+    background-size: 12px 12px;
+}
+.apply_content .radio-options span b {
+    position: absolute;
+    top: -7px;
+    right: -6px;
+    display: inline-block;
+    background: url(../images/common/icon-del.png) no-repeat left center;
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+    display: none;
+}
+.apply_detail .apply_btn{
+    margin-left: 130px;
+}
+.apply_detail .apply_tips{
+    font-size: 14px;
+    margin: 15px 0 0 150px;
+
+}
+.apply_detail .apply_btn .item{
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 20px;
+    text-align: center;
+}
+.apply_detail .apply_btn .item.okey{
+    background-color: #5b8ed2;
+    color: #ffffff;
+}
+.apply_detail .apply_btn .item.cancel{
+    background-color: #ffffff;
+    border: 1px solid #5b8ed2;
+    color: #5b8ed2;
+}
+.apply_detail  ul li .error{
+     height: 30px;
+     line-height: 30px;
+     color: #f52424;
+     margin-left: 15px;
+ }
+
+/*
+**提货申请中间部分<!--结束-->
+ */
+/*
+**订单信息<!--开始-->
+ */
+.apply_main .order_message{
+    margin: 20px 0;
+    padding: 20px 33px;
+    background-color: #fff;
+}
+.order_message .order_title{
+    font-size: 16px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #efefef;
+}
+.order_message .order_detail{
+    font-size: 14px;
+    line-height: 30px;
+    padding:15px 0 0 0;
+}
+.order_message .order_quantity_detail{
+    color: #999;
+}
+.order_message .order_quantity_detail .order_quantity{
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    color: #363636;
+}
+.order_message .order_quantity_detail .order_id{
+    position: relative;
+    left: 69%;
+}
+.order_message .order_detail ul li label{
+    width: 80px;
+    text-align: left;
+    height: 30px;
+    display: inline-block;
+}
+.order_message .order_detail ul li span{
+    color: #999;
+    height: 30px;
+}
+.order_message .remark_area{
+    margin-left: 80px;
+}
+.apply_submit_area .apply_content input.red{
+    border:1px solid #f52424;
+}
+.apply_submit_area .apply_content textarea.red{
+    border:1px solid #f52424;
+}
+
+#buy-insurance{
+    float: right;
+    color: #5b8ed2;
+}

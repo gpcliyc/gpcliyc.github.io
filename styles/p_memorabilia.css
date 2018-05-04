@@ -1,0 +1,33 @@
+/*交易网大事记*/
+.important-event{
+    background: #fff;
+}
+.important-event .title {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    margin: 0 40px;
+    border-bottom: solid 1px #ececec;
+
+}
+.important-event .event-items{
+    padding: 20px 0px;
+}
+.important-event .event-items li{
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 40px;
+}
+.important-event .event-items li .date{
+    display: inline-block;
+    width: 90px;
+}
+/*.important-event .event-items li::before{*/
+    /*display: inline-block;*/
+    /*content: '';*/
+    /*width: 10px;*/
+    /*height: 10px;*/
+    /*border-radius: 12px;*/
+    /*position: relative;*/
+    /*left: -10px;*/
+/*}*/

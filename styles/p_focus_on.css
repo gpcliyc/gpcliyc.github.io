@@ -1,0 +1,42 @@
+
+/*关注的公司和关注的招标切换*/
+.follow-company,.follow-element{
+    cursor: pointer;
+}
+.active{
+    color: #5b8ed2;
+}
+.hide{
+    display: none;
+}
+
+/*关注的招标*/
+.element span:nth-child(1){
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: red;
+}
+.element .content{
+    display: inline-block;
+    width: 100px;
+}
+.element-su{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/element/GMIcon-test1.svg) bottom center no-repeat;
+}
+.element-ash{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/element/GMIcon-test2.svg) bottom center no-repeat;
+}
+.element-va{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/element/GMIcon-test4.svg) bottom center no-repeat;
+}
+
